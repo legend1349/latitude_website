@@ -84,39 +84,15 @@
     goTo(0);
   }
 
-  // ── Enquiry form stub ────────────────────────────────────
-  const form    = document.getElementById('enquiryForm');
-  const success = document.getElementById('formSuccess');
-  if (form && success) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      // Basic client-side validation
-      const name  = form.elements['name'];
-      const email = form.elements['email'];
-      if (!name.value.trim() || !email.value.trim()) {
-        name.focus();
-        return;
+  // Show success message when Formspree hides the form on submission
+  const enquiryForm = document.getElementById('enquiryForm');
+  const formSuccess = document.getElementById('formSuccess');
+  if (enquiryForm && formSuccess) {
+    new MutationObserver(() => {
+      if (enquiryForm.style.display === 'none') {
+        formSuccess.style.display = 'flex';
       }
-
-      /* ── Phase 2: replace stub below with real API call ──
-         const data = Object.fromEntries(new FormData(form));
-         fetch('/api/enquire', {
-           method: 'POST',
-           headers: { 'Content-Type': 'application/json' },
-           body: JSON.stringify(data),
-         }).then(r => r.ok && showSuccess()).catch(console.error);
-      */
-
-      showSuccess();
-    });
-
-    function showSuccess() {
-      form.querySelectorAll('input, select, textarea, button').forEach(el => {
-        el.setAttribute('disabled', '');
-      });
-      success.removeAttribute('hidden');
-    }
+    }).observe(enquiryForm, { attributes: true, attributeFilter: ['style'] });
   }
 
 })();

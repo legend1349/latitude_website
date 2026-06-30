@@ -9,6 +9,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#enquiryForm', formId: 'mrewaeay' });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </head>
 <body>
 
@@ -294,25 +299,28 @@
         <h2 class="contact__heading">Enquire about a place</h2>
         <p class="contact__sub">Fill in your details and we'll get back to you within one business day.</p>
       </div>
-      <form class="contact__form" id="enquiryForm" action="#" novalidate>
+      <form class="contact__form" id="enquiryForm" novalidate>
+        <div data-fs-error class="form__fs-error" role="alert" aria-live="polite"></div>
         <div class="form__row form__row--two">
           <div class="form__field">
             <label for="fname">Full name</label>
-            <input type="text" id="fname" name="name" placeholder="Alex Smith" autocomplete="name" required />
+            <input type="text" id="fname" name="name" placeholder="Alex Smith" autocomplete="name" required data-fs-field />
+            <span data-fs-error="name" class="form__field-error"></span>
           </div>
           <div class="form__field">
             <label for="femail">Email address</label>
-            <input type="email" id="femail" name="email" placeholder="alex@example.com" autocomplete="email" required />
+            <input type="email" id="femail" name="email" placeholder="alex@example.com" autocomplete="email" required data-fs-field />
+            <span data-fs-error="email" class="form__field-error"></span>
           </div>
         </div>
         <div class="form__row form__row--two">
           <div class="form__field">
             <label for="fphone">Phone number</label>
-            <input type="tel" id="fphone" name="phone" placeholder="04xx xxx xxx" autocomplete="tel" />
+            <input type="tel" id="fphone" name="phone" placeholder="04xx xxx xxx" autocomplete="tel" data-fs-field />
           </div>
           <div class="form__field">
             <label for="fyear">Year group</label>
-            <select id="fyear" name="year">
+            <select id="fyear" name="year" data-fs-field>
               <option value="">Select year…</option>
               <option value="11">Year 11</option>
               <option value="12">Year 12</option>
@@ -322,13 +330,13 @@
         <div class="form__row">
           <div class="form__field">
             <label for="fmessage">Message <span class="form__optional">(optional)</span></label>
-            <textarea id="fmessage" name="message" rows="4" placeholder="Tell us a bit about your Maths course and what you're working on…"></textarea>
+            <textarea id="fmessage" name="message" rows="4" placeholder="Tell us a bit about your Maths course and what you're working on…" data-fs-field></textarea>
           </div>
         </div>
         <div class="form__row form__row--action">
-          <button type="submit" class="btn btn--teal">Send Enquiry</button>
+          <button type="submit" class="btn btn--teal" data-fs-submit-btn>Send Enquiry</button>
         </div>
-        <div class="form__success" id="formSuccess" role="alert" aria-live="polite" hidden>
+        <div class="form__success" id="formSuccess" role="alert" aria-live="polite" style="display:none">
           <span class="form__success-dot" aria-hidden="true"></span>
           Thanks, we'll be in touch shortly.
         </div>
