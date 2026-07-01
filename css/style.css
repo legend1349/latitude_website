@@ -916,14 +916,34 @@ section {
 .form__field textarea { resize: vertical; min-height: 110px; }
 
 .form__success {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 0.6rem;
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--teal);
 }
-.form__success[hidden] { display: none; }
+/* Formspree shows success by removing aria-hidden */
+.form__success:not([aria-hidden="true"]) { display: flex; }
+
+.form__fs-error:not(:empty) {
+  font-size: 0.85rem;
+  color: #c0392b;
+  margin-bottom: 0.75rem;
+}
+
+.form__field-error:not(:empty) {
+  display: block;
+  font-size: 0.78rem;
+  color: #c0392b;
+  margin-top: 0.25rem;
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: #c0392b;
+}
 
 .form__success-dot {
   display: block;
