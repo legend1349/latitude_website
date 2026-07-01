@@ -5,14 +5,19 @@
 
 /* ── Tokens ─────────────────────────────────────────────── */
 :root {
-  --navy:      #1C2E4A;
-  --navy-deep: #141F33;
-  --teal:      #0DAD9D;
-  --teal-dim:  #0b9287;
-  --white:     #FFFFFF;
-  --off-white: #F4F3EE;
-  --muted:     #6B7A8D;
-  --border:    #DDE0E6;
+  /* Warm terracotta brand palette
+     (token names kept from the original teal/navy scheme) */
+  --navy:      #3A3430;  /* warm charcoal — main text & dark sections */
+  --navy-deep: #2E2925;  /* deeper charcoal — nav & footer */
+  --teal:      #C96F4A;  /* warm terracotta — primary accent */
+  --teal-dim:  #B25E3B;  /* terracotta hover */
+  --sage:      #8FAF8F;  /* sage green — highlights, small sections */
+  --sage-dim:  #7A9A7A;
+  --peach:     #F7C9A8;  /* light peach — cards & callouts */
+  --white:     #FFFCF7;  /* off-white — main page background */
+  --off-white: #FFF4E6;  /* soft cream — alternating sections */
+  --muted:     #8A7F76;  /* warm muted grey */
+  --border:    #E7DECF;  /* warm border */
 
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans:  'Plus Jakarta Sans', system-ui, sans-serif;
@@ -23,7 +28,7 @@
   --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --ease-out-quart: cubic-bezier(0.16, 1, 0.3, 1);
 
-  --body-text: var(--body-text);
+  --body-text: #57514B;  /* softened charcoal for body copy */
 }
 
 /* ── Reset ──────────────────────────────────────────────── */
@@ -301,8 +306,9 @@ section {
 }
 
 .about__stat-block {
-  border-left: 2px solid var(--border);
-  padding-left: 1.75rem;
+  background: var(--peach);
+  border-radius: 6px;
+  padding: 1.75rem;
 }
 
 .about__stat {
@@ -324,7 +330,8 @@ section {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--navy);
+  opacity: 0.75;
   margin-top: 0.25rem;
 }
 
@@ -340,7 +347,7 @@ section {
   align-items: center;
   gap: 0.6rem;
   font-size: 0.9rem;
-  color: var(--muted);
+  color: var(--navy);
   font-weight: 500;
 }
 
@@ -452,10 +459,8 @@ section {
 }
 .offer__panel p strong { color: var(--navy); font-weight: 600; }
 
-.offer__panel--secondary .offer__panel-heading {
-  font-size: clamp(1.2rem, 1.8vw, 1.45rem);
-}
-.offer__panel--secondary p { color: var(--muted); }
+.offer__panel--secondary .offer__panel-label { color: var(--sage-dim); }
+.offer__panel--secondary .offer__panel-label::before { background: var(--sage); }
 
 .offer__divider {
   background: var(--teal);
@@ -689,8 +694,8 @@ section {
   min-width: 220px;
 }
 
-.class-card--y11 { border-left-color: var(--teal); }
-.class-card--y12 { border-left-color: var(--navy); }
+.class-card--y11 { border-left-color: var(--sage); }
+.class-card--y12 { border-left-color: var(--teal); }
 
 .class-card__year {
   display: block;
@@ -707,8 +712,8 @@ section {
   font-size: 0.9rem;
   font-weight: 600;
 }
-.class-card--y11 .class-card__name { color: var(--teal); }
-.class-card--y12 .class-card__name { color: var(--navy); }
+.class-card--y11 .class-card__name { color: var(--sage-dim); }
+.class-card--y12 .class-card__name { color: var(--teal); }
 
 .class-card__type {
   display: block;
@@ -743,8 +748,8 @@ section {
   border-radius: 50%;
   flex-shrink: 0;
 }
-.timings__legend-item--y11::before { background: var(--teal); }
-.timings__legend-item--y12::before { background: var(--navy); }
+.timings__legend-item--y11::before { background: var(--sage); }
+.timings__legend-item--y12::before { background: var(--teal); }
 
 /* ── Who We Serve ───────────────────────────────────────── */
 .serve {
@@ -898,7 +903,7 @@ section {
 }
 
 .form__field select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B7A8D' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238A7F76' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 0.85rem center;
   padding-right: 2.25rem;
@@ -961,7 +966,7 @@ textarea[aria-invalid="true"] {
 
 .footer__rule {
   height: 1.5px;
-  background: linear-gradient(to right, var(--teal), rgba(13,173,157,0));
+  background: linear-gradient(to right, var(--teal), rgba(201,111,74,0));
   margin-bottom: 2rem;
 }
 
