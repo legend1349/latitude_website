@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Group classes">
+<!-- Latitude Tutoring brand SVG asset. Themeable via CSS vars: lat-ink, lat-accent, lat-accent-2, lat-peach -->
+  <g fill="none" stroke="var(--lat-ink,#2E2925)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="6.5" cy="7.5" r="2"/>
+    <path d="M 3.3 13.5 a 3.2 3.2 0 0 1 6.4 0"/>
+    <circle cx="12" cy="6" r="2.1"/>
+    <path d="M 8.5 12.2 a 3.5 3.5 0 0 1 7 0"/>
+    <circle cx="17.5" cy="7.5" r="2"/>
+    <path d="M 14.3 13.5 a 3.2 3.2 0 0 1 6.4 0"/>
+    <line x1="4" y1="20" x2="19" y2="20" opacity="0.85"/>
+    <circle cx="19" cy="20" r="1.5" fill="var(--lat-accent,#C4724F)" stroke="none"/>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+<!-- Latitude Tutoring brand SVG asset. Themeable via CSS vars: lat-ink, lat-accent, lat-accent-2, lat-peach -->
+  <defs>
+    <pattern id="latGraph" width="48" height="48" patternUnits="userSpaceOnUse">
+      <g stroke="var(--lat-ink,#2E2925)" fill="none" stroke-width="1">
+        <!-- minor grid every 12 -->
+        <g opacity="0.05">
+          <path d="M12 0V48 M24 0V48 M36 0V48 M0 12H48 M0 24H48 M0 36H48"/>
+        </g>
+        <!-- major grid at tile edge -->
+        <g opacity="0.09">
+          <path d="M0 0H48 M0 0V48"/>
+        </g>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="48" height="48" fill="url(#latGraph)"/>
+</svg>

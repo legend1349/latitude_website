@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Class timetable">
+<!-- Latitude Tutoring brand SVG asset. Themeable via CSS vars: lat-ink, lat-accent, lat-accent-2, lat-peach -->
+  <g fill="none" stroke="var(--lat-ink,#2E2925)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="5.5" width="16" height="14.5" rx="2"/>
+    <line x1="4" y1="10" x2="20" y2="10" opacity="0.85"/>
+    <line x1="8" y1="3.5" x2="8" y2="7"/>
+    <line x1="16" y1="3.5" x2="16" y2="7"/>
+    <rect x="6.6" y="12.2" width="3.4" height="2.6" rx="0.6" fill="var(--lat-accent,#C4724F)" stroke="none"/>
+    <line x1="12" y1="13.5" x2="17.4" y2="13.5" opacity="0.55"/>
+    <line x1="7" y1="17.3" x2="17.4" y2="17.3" opacity="0.55"/>
+  </g>
+</svg>

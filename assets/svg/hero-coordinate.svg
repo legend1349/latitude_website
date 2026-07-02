@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 380" role="img" aria-label="Coordinate plane with a curve, its tangent, and a plotted point">
+<!-- Latitude Tutoring brand SVG asset. Themeable via CSS vars: lat-ink, lat-accent, lat-accent-2, lat-peach -->
+  <g fill="none" stroke="var(--lat-ink,#FBF6EE)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- faint gridlines -->
+    <g stroke-width="1" opacity="0.10">
+      <line x1="134.0" y1="40" x2="134.0" y2="300"/><line x1="190.0" y1="40" x2="190.0" y2="300"/><line x1="246.0" y1="40" x2="246.0" y2="300"/><line x1="302.0" y1="40" x2="302.0" y2="300"/><line x1="358.0" y1="40" x2="358.0" y2="300"/><line x1="414.0" y1="40" x2="414.0" y2="300"/>
+      <line x1="78" y1="248.0" x2="430.8" y2="248.0"/><line x1="78" y1="196.0" x2="430.8" y2="196.0"/><line x1="78" y1="144.0" x2="430.8" y2="144.0"/><line x1="78" y1="92.0" x2="430.8" y2="92.0"/><line x1="78" y1="40.0" x2="430.8" y2="40.0"/>
+    </g>
+    <!-- axes -->
+    <g stroke-width="1.6" opacity="0.75">
+      <line x1="78" y1="40" x2="78" y2="312"/>
+      <line x1="66" y1="300" x2="442.0" y2="300"/>
+      <path d="M 74 48 L 78 40 L 82 48" opacity="0.9"/>
+      <path d="M 434.0 296 L 442.0 300 L 434.0 304"/>
+    </g>
+    <!-- ticks -->
+    <g stroke-width="1.4" opacity="0.55"><line x1="134.0" y1="300" x2="134.0" y2="294"/><line x1="190.0" y1="300" x2="190.0" y2="294"/><line x1="246.0" y1="300" x2="246.0" y2="294"/><line x1="302.0" y1="300" x2="302.0" y2="294"/><line x1="358.0" y1="300" x2="358.0" y2="294"/><line x1="414.0" y1="300" x2="414.0" y2="294"/><line x1="78" y1="248.0" x2="84" y2="248.0"/><line x1="78" y1="196.0" x2="84" y2="196.0"/><line x1="78" y1="144.0" x2="84" y2="144.0"/><line x1="78" y1="92.0" x2="84" y2="92.0"/><line x1="78" y1="40.0" x2="84" y2="40.0"/></g>
+    <!-- secondary curve (sage) -->
+    <path d="M 111.6 277.1 L 116.1 276.1 L 120.6 275.1 L 125.0 274.1 L 129.5 273.1 L 134.0 272.0 L 138.5 270.8 L 143.0 269.6 L 147.4 268.4 L 151.9 267.2 L 156.4 265.9 L 160.9 264.5 L 165.4 263.1 L 169.8 261.7 L 174.3 260.2 L 178.8 258.7 L 183.3 257.1 L 187.8 255.5 L 192.2 253.8 L 196.7 252.0 L 201.2 250.2 L 205.7 248.3 L 210.2 246.4 L 214.6 244.3 L 219.1 242.3 L 223.6 240.1 L 228.1 237.9 L 232.6 235.6 L 237.0 233.2 L 241.5 230.7 L 246.0 228.2 L 250.5 225.6 L 255.0 222.9 L 259.4 220.0 L 263.9 217.1 L 268.4 214.1 L 272.9 211.0 L 277.4 207.8 L 281.8 204.5 L 286.3 201.0 L 290.8 197.5 L 295.3 193.8 L 299.8 190.0 L 304.2 186.0 L 308.7 182.0 L 313.2 177.7 L 317.7 173.4 L 322.2 168.9 L 326.6 164.2 L 331.1 159.4 L 335.6 154.4 L 340.1 149.3 L 344.6 144.0 L 349.0 138.4 L 353.5 132.7 L 358.0 126.9 L 362.5 120.8 L 367.0 114.5 L 371.4 107.9 L 375.9 101.2 L 380.4 94.2" stroke="var(--lat-accent-2,#8FA98A)" stroke-width="2" opacity="0.8"/>
+    <!-- tangent line -->
+    <line x1="275.2" y1="269.8" x2="407.2" y2="93.3" stroke="var(--lat-ink,#FBF6EE)" stroke-width="1.5" opacity="0.7" stroke-dasharray="1 7"/>
+    <!-- main curve (orange) -->
+    <path d="M 97.6 212.1 L 103.1 217.9 L 108.6 223.4 L 114.1 228.7 L 119.6 233.6 L 125.1 238.2 L 130.6 242.5 L 136.1 246.6 L 141.7 250.3 L 147.2 253.7 L 152.7 256.8 L 158.2 259.6 L 163.7 262.2 L 169.2 264.4 L 174.7 266.3 L 180.2 267.9 L 185.7 269.2 L 191.2 270.2 L 196.7 270.9 L 202.2 271.3 L 207.7 271.4 L 213.2 271.2 L 218.7 270.7 L 224.3 269.9 L 229.8 268.8 L 235.3 267.4 L 240.8 265.7 L 246.3 263.6 L 251.8 261.3 L 257.3 258.7 L 262.8 255.8 L 268.3 252.6 L 273.8 249.1 L 279.3 245.2 L 284.8 241.1 L 290.3 236.7 L 295.8 232.0 L 301.3 226.9 L 306.9 221.6 L 312.4 216.0 L 317.9 210.0 L 323.4 203.8 L 328.9 197.3 L 334.4 190.4 L 339.9 183.3 L 345.4 175.8 L 350.9 168.1 L 356.4 160.1 L 361.9 151.7 L 367.4 143.1 L 372.9 134.1 L 378.4 124.9 L 383.9 115.3 L 389.5 105.4 L 395.0 95.3 L 400.5 84.8 L 406.0 74.1 L 411.5 63.0 L 417.0 51.6 L 422.5 40.0 L 428.0 28.0" stroke="var(--lat-accent,#C4724F)" stroke-width="2.6"/>
+  </g>
+  <!-- plotted point: the brand signature -->
+  <circle cx="341.2" cy="181.5" r="6.5" fill="none" stroke="var(--lat-ink,#FBF6EE)" stroke-width="1.4" opacity="0.5"/>
+  <circle cx="341.2" cy="181.5" r="4" fill="var(--lat-accent,#C4724F)"/>
+  <!-- faint equation fragment -->
+  <text x="344.0" y="63.4" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="17" fill="var(--lat-ink,#FBF6EE)" opacity="0.42">f(x)</text>
+  <text x="76" y="32.0" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="13" fill="var(--lat-ink,#FBF6EE)" opacity="0.32">y</text>
+  <text x="438.0" y="320" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="13" fill="var(--lat-ink,#FBF6EE)" opacity="0.32">x</text>
+</svg>

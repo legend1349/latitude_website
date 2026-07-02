@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 24" role="img" aria-label="Divider: brackets with point">
+<!-- Latitude Tutoring brand SVG asset. Themeable via CSS vars: lat-ink, lat-accent, lat-accent-2, lat-peach -->
+  <g fill="none" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+    <path d="M 74 5 L 68 5 L 68 19 L 74 19"/>
+    <path d="M 166 5 L 172 5 L 172 19 L 166 19"/>
+    <line x1="84" y1="12" x2="112" y2="12" opacity="0.6"/>
+    <line x1="128" y1="12" x2="156" y2="12" opacity="0.6"/>
+  </g>
+  <circle cx="120" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+</svg>
