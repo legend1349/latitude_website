@@ -483,9 +483,96 @@ section {
   line-height: 1.8;
 }
 
+/* ── Reusable step number badge (used in How Your Week Works, How Enrolment Works) ── */
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--teal);
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--teal);
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+/* ── Courses We Teach ───────────────────────────────────── */
+.courses {
+  background: var(--white);
+  padding: var(--sec-pad) var(--pad-x);
+}
+
+.courses__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.courses__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--navy);
+  margin-bottom: 1.25rem;
+}
+
+.courses__intro {
+  font-size: 1.0125rem;
+  color: var(--body-text);
+  max-width: 62ch;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.courses__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.courses__card {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem 2.25rem;
+}
+
+.courses__card--y12 {
+  border-color: var(--teal);
+}
+
+.courses__year {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 1.1rem;
+}
+
+.courses__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.courses__list li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.9375rem;
+  color: var(--body-text);
+  font-weight: 500;
+}
+
 /* ── What We Offer ──────────────────────────────────────── */
 .offer {
   background: var(--white);
+  border-top: 1px solid var(--border);
   padding: var(--sec-pad) var(--pad-x);
 }
 
@@ -553,7 +640,14 @@ section {
   font-weight: 700;
   line-height: 1.2;
   color: var(--navy);
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.6rem;
+}
+
+.offer__panel-meta {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 1.1rem !important;
 }
 
 .offer__panel p {
@@ -566,9 +660,98 @@ section {
 
 .offer__panel--secondary .offer__panel-label { color: var(--sage-dim); }
 
+/* ── How Your Week Works ─────────────────────────────────── */
+.week {
+  background: var(--off-white);
+  padding: var(--sec-pad) var(--pad-x);
+}
+
+.week__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.week__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--navy);
+  margin-bottom: 1.25rem;
+}
+
+.week__intro {
+  font-size: 1.0125rem;
+  color: var(--body-text);
+  max-width: 64ch;
+  line-height: 1.8;
+  margin-bottom: 2.75rem;
+}
+
+.week__tracks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.week__track {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--teal);
+  border-radius: 0 10px 10px 0;
+  padding: 1.5rem 1.75rem;
+}
+
+.week__track--alt {
+  border-left-color: var(--sage);
+}
+
+.week__track-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 0.6rem;
+}
+
+.week__track--alt .week__track-label { color: var(--sage-dim); }
+
+.week__track p {
+  font-size: 0.9375rem;
+  color: var(--body-text);
+  line-height: 1.7;
+}
+
+.week__flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.week__flow-item p {
+  font-size: 0.9rem;
+  color: var(--body-text);
+  font-weight: 500;
+  line-height: 1.5;
+  max-width: 22ch;
+}
+
+.week__note {
+  margin-top: 2rem;
+  font-size: 0.9375rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
 /* ── Latitude or Private ─────────────────────────────────── */
 .vs {
   background: var(--off-white);
+  border-top: 1px solid var(--border);
   padding: var(--sec-pad) var(--pad-x);
 }
 
@@ -592,102 +775,283 @@ section {
   margin-bottom: 1.25rem;
 }
 
-/* ── Testimonials ────────────────────────────────────────── */
-.testimonials {
+/* ── Where Lessons Run ───────────────────────────────────── */
+.location {
   background: var(--white);
   padding: var(--sec-pad) var(--pad-x);
 }
 
-.testimonials__inner {
+.location__inner {
   max-width: var(--max-w);
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 5rem;
+  align-items: start;
 }
 
-.testimonials__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 2.5rem;
-}
-.testimonials__header .label { margin-bottom: 0; }
-
-.testimonials__controls {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.testimonials__btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px; height: 40px;
-  border: 1.5px solid var(--border);
-  border-radius: 50%;
-  color: var(--navy);
-  transition: border-color 0.2s var(--ease), background 0.2s var(--ease), color 0.2s var(--ease);
-}
-.testimonials__btn:hover {
-  border-color: var(--teal);
-  background: var(--teal);
-  color: var(--white);
-}
-.testimonials__btn:disabled {
-  opacity: 0.3;
-  pointer-events: none;
-}
-
-.testimonials__track-wrap {
-  overflow: hidden;
-  border-top: 2px solid var(--navy);
-}
-
-.testimonials__track {
-  display: flex;
-  transition: transform 0.4s var(--ease);
-}
-
-.testimonial {
-  border: none;
-  padding: 2rem 0 0;
-  margin: 0;
-  min-width: 100%;
-  flex-shrink: 0;
-}
-
-.testimonial__quote {
+.location__heading {
   font-family: var(--font-serif);
-  font-style: italic;
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
-  line-height: 1.75;
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.18;
   color: var(--navy);
-  margin-bottom: 1.25rem;
-  max-width: 72ch;
+  margin-bottom: 1.5rem;
 }
 
-.testimonial__attr {
-  font-size: 0.78rem;
+.location__body p {
+  color: var(--body-text);
+  margin-bottom: 1.2rem;
+  font-size: 1.0125rem;
+  line-height: 1.8;
+  max-width: 58ch;
+}
+.location__body p strong { color: var(--navy); font-weight: 600; }
+
+.location__suburbs {
+  font-size: 0.9375rem !important;
+  color: var(--muted) !important;
+}
+
+.location__aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  padding: 1.75rem;
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.location__fact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.location__fact-label {
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
 }
 
-.testimonials__dots {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 1.75rem;
+.location__fact-value {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--navy);
 }
 
-.testimonials__dot {
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--border);
-  transition: background 0.2s, transform 0.2s;
+/* ── Sample Materials ────────────────────────────────────── */
+.samples {
+  background: var(--white);
+  padding: var(--sec-pad) var(--pad-x);
 }
-.testimonials__dot.active {
-  background: var(--teal);
-  transform: scale(1.3);
+
+.samples__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
 }
+
+.samples__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--navy);
+  margin-bottom: 2rem;
+}
+
+.samples__card {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.samples__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  aspect-ratio: 3 / 4;
+  border: 1.5px dashed var(--border);
+  border-radius: 12px;
+  background: var(--off-white);
+  padding: 1.5rem;
+  text-align: center;
+}
+.samples__placeholder svg { width: 36px; height: 36px; }
+.samples__placeholder span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.samples__caption {
+  font-size: 1.0125rem;
+  color: var(--body-text);
+  line-height: 1.8;
+  max-width: 52ch;
+}
+
+/* ── Pricing ─────────────────────────────────────────────── */
+.pricing {
+  background: var(--off-white);
+  padding: var(--sec-pad) var(--pad-x);
+}
+
+.pricing__inner {
+  max-width: 72ch;
+  margin: 0 auto;
+}
+
+.pricing__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 1.25rem;
+}
+
+.pricing__inner p {
+  font-size: 1.0125rem;
+  color: var(--body-text);
+  line-height: 1.85;
+  max-width: 62ch;
+}
+
+/* ── How Enrolment Works ─────────────────────────────────── */
+.enrol {
+  background: var(--white);
+  padding: var(--sec-pad) var(--pad-x);
+}
+
+.enrol__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.enrol__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--navy);
+  margin-bottom: 2.75rem;
+}
+
+.enrol__steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.enrol__step h3 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+.enrol__step p {
+  font-size: 0.9rem;
+  color: var(--body-text);
+  line-height: 1.6;
+}
+
+/* ── Student & Parent Feedback ───────────────────────────── */
+.feedback {
+  background: var(--off-white);
+  padding: var(--sec-pad) var(--pad-x);
+}
+
+.feedback__inner {
+  max-width: 68ch;
+  margin: 0 auto;
+  text-align: center;
+}
+.feedback__inner .label { display: block; }
+
+.feedback__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3.2vw, 2.4rem);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 1.25rem;
+}
+
+.feedback__inner p {
+  font-size: 1.0125rem;
+  color: var(--body-text);
+  line-height: 1.85;
+}
+
+/* ── FAQ ──────────────────────────────────────────────────── */
+.faq {
+  background: var(--white);
+  padding: var(--sec-pad) var(--pad-x);
+}
+
+.faq__inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.faq__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--navy);
+  margin-bottom: 2.5rem;
+}
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--border);
+  padding: 1.15rem 0;
+}
+.faq__item:first-child { border-top: 1px solid var(--border); }
+
+.faq__item summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__item summary::after {
+  content: '+';
+  flex-shrink: 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--teal);
+  transition: transform 0.2s var(--ease);
+}
+.faq__item[open] summary::after { transform: rotate(45deg); }
+
+.faq__item p {
+  margin-top: 0.9rem;
+  font-size: 0.9375rem;
+  color: var(--body-text);
+  line-height: 1.75;
+  max-width: 68ch;
+}
+.faq__item p a { color: var(--teal); font-weight: 600; border-bottom: 1px solid rgba(201,111,74,0.35); }
 
 /* ── Class Timings ───────────────────────────────────────── */
 .timings {
@@ -1182,6 +1546,36 @@ textarea[aria-invalid="true"] {
     gap: 1.5rem;
   }
 
+  .courses__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .week__tracks {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .week__flow {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+  }
+
+  .location__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .location__aside { max-width: 340px; }
+
+  .samples__card {
+    grid-template-columns: 1fr;
+  }
+  .samples__placeholder { max-width: 220px; aspect-ratio: 4 / 3; }
+
+  .enrol__steps {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
   .contact__inner {
     grid-template-columns: 1fr;
     gap: 2.5rem;
@@ -1229,6 +1623,10 @@ textarea[aria-invalid="true"] {
 
   .serve__details { flex-direction: column; gap: 2rem; }
   .serve__divider { display: none; }
+
+  .week__flow { grid-template-columns: 1fr; gap: 1.5rem; }
+  .enrol__steps { grid-template-columns: 1fr; gap: 1.75rem; }
+  .samples__card { text-align: center; justify-items: center; }
 
   .footer__row { flex-direction: column; align-items: flex-start; gap: 1rem; }
   .footer__brand { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
@@ -1318,13 +1716,6 @@ textarea[aria-invalid="true"] {
   .js [data-reveal-delay="1"] { transition-delay: 0.08s; }
   .js [data-reveal-delay="2"] { transition-delay: 0.16s; }
   .js [data-reveal-delay="3"] { transition-delay: 0.24s; }
-}
-
-/* Testimonials dot (now a span, purely visual) */
-.testimonials__dot {
-  cursor: pointer;
-  border: none;
-  padding: 0;
 }
 
 /* ── Accessibility ──────────────────────────────────────── */

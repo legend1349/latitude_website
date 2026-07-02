@@ -41,19 +41,28 @@
     '.about__aside',
     '.mission__quote',
     '.mission__body',
+    '.courses__intro',
+    '.courses__grid',
     '.offer__heading',
     '.offer__panel--primary',
     '.offer__panel--secondary',
+    '.week__intro',
+    '.week__tracks',
+    '.week__flow',
     '.vs__heading',
     '.vs__body',
+    '.location__body',
+    '.location__aside',
     '.serve__icon',
     '.serve__heading',
     '.serve__details',
-    '.testimonials__header',
-    '.testimonials__track-wrap',
-    '.testimonials__dots',
+    '.samples__card',
     '.timings__head',
     '.timings__table-wrap',
+    '.pricing__inner',
+    '.enrol__steps',
+    '.feedback__inner',
+    '.faq__list',
     '.contact__header',
     '.contact__form',
   ].join(', ');
@@ -79,77 +88,6 @@
         observer.observe(el);
       }
     });
-  }
-
-  // ── Testimonial slider ───────────────────────────────────
-  const track    = document.getElementById('testimonialTrack');
-  const prevBtn  = document.getElementById('testimonialPrev');
-  const nextBtn  = document.getElementById('testimonialNext');
-  const dotsWrap = document.getElementById('testimonialDots');
-
-  if (track && prevBtn && nextBtn && dotsWrap) {
-    const slides = Array.from(track.children);
-    let current = 0;
-    let autoTimer = null;
-    const AUTO_INTERVAL = 5000;
-
-    // Dots as visual spans (prev/next handle keyboard)
-    dotsWrap.removeAttribute('aria-hidden');
-    dotsWrap.setAttribute('aria-label', 'Testimonial indicators');
-    slides.forEach((_, i) => {
-      const dot = document.createElement('span');
-      dot.className = 'testimonials__dot' + (i === 0 ? ' active' : '');
-      dot.setAttribute('aria-hidden', 'true');
-      dot.addEventListener('click', () => { goTo(i); resetAuto(); });
-      dotsWrap.appendChild(dot);
-    });
-
-    function goTo(index) {
-      current = Math.max(0, Math.min(index, slides.length - 1));
-      track.style.transform = 'translateX(-' + (current * 100) + '%)';
-      dotsWrap.querySelectorAll('.testimonials__dot').forEach((d, i) => {
-        d.classList.toggle('active', i === current);
-      });
-      prevBtn.disabled = current === 0;
-      nextBtn.disabled = current === slides.length - 1;
-    }
-
-    function startAuto() {
-      autoTimer = setInterval(() => {
-        goTo(current < slides.length - 1 ? current + 1 : 0);
-      }, AUTO_INTERVAL);
-    }
-
-    function resetAuto() {
-      clearInterval(autoTimer);
-      startAuto();
-    }
-
-    prevBtn.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
-    nextBtn.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
-
-    // Pause on hover / focus within the section
-    const testimonialSection = track.closest('.testimonials');
-    if (testimonialSection) {
-      testimonialSection.addEventListener('mouseenter', () => clearInterval(autoTimer));
-      testimonialSection.addEventListener('mouseleave', startAuto);
-      testimonialSection.addEventListener('focusin',   () => clearInterval(autoTimer));
-      testimonialSection.addEventListener('focusout',  startAuto);
-    }
-
-    // Swipe support
-    let touchStartX = 0;
-    track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-    track.addEventListener('touchend', e => {
-      const delta = touchStartX - e.changedTouches[0].clientX;
-      if (Math.abs(delta) > 40) {
-        goTo(delta > 0 ? current + 1 : current - 1);
-        resetAuto();
-      }
-    });
-
-    goTo(0);
-    startAuto();
   }
 
   // ── Form success detection ───────────────────────────────
