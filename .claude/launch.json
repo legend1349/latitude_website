@@ -4,8 +4,8 @@
     {
       "name": "latitude-site",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "3000", "--directory", "C:\\Users\\Gaming PC\\Documents\\website"],
-      "port": 3000
+      "runtimeArgs": ["-m", "http.server", "3001", "--directory", "C:\\Users\\Gaming PC\\Documents\\website"],
+      "port": 3001
     }
   ]
 }

@@ -1583,6 +1583,8 @@ textarea[aria-invalid="true"] {
 }
 
 @media (max-width: 640px) {
+  .hero__graphic { display: none !important; }
+
   .nav__links {
     display: none;
     flex-direction: column;
