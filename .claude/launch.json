@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "latitude-site",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "3000", "--directory", "C:\\Users\\Gaming PC\\Documents\\website"],
+      "port": 3000
+    }
+  ]
+}
