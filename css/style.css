@@ -1321,6 +1321,37 @@ section {
   margin: 0 3rem;
 }
 
+/* ── Book a Call ────────────────────────────────────────── */
+.booking {
+  background: var(--off-white);
+  padding: 6rem var(--pad-x) 3rem;
+}
+
+.booking__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.booking__header {
+  max-width: 58ch;
+  margin-bottom: 2.5rem;
+}
+
+.booking__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 2.8vw, 2.25rem);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.booking__sub {
+  font-size: 0.9375rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 /* ── Contact ────────────────────────────────────────────── */
 .contact {
   background: var(--off-white);
