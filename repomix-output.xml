@@ -1,0 +1,2849 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+assets/
+  svg/
+    divider-1-point.svg
+    divider-2-ticks.svg
+    divider-3-brackets.svg
+    divider-4-wave.svg
+    divider-5-interval.svg
+    hero-coordinate.svg
+    icon-group-classes.svg
+    icon-homework-help.svg
+    icon-progress.svg
+    icon-timetable.svg
+    pattern-graph.svg
+  logo.jpeg
+  logo.png
+css/
+  style.css
+js/
+  main.js
+.gitignore
+CNAME
+index.html
+logo.png
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="assets/svg/divider-1-point.svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 24" role="img" aria-label="Divider: plotted line">
+<!-- Latitude Tutoring brand SVG asset. Themeable via CSS vars: lat-ink, lat-accent, lat-accent-2, lat-peach -->
+  <line x1="30" y1="12" x2="210" y2="12" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
+  <circle cx="30" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+  <circle cx="210" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+</svg>
+</file>
+
+<file path="assets/svg/divider-2-ticks.svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 24" role="img" aria-label="Divider: axis ticks">
+<!-- Latitude Tutoring brand SVG asset. Themeable via CSS vars: lat-ink, lat-accent, lat-accent-2, lat-peach -->
+  <line x1="40" y1="12" x2="200" y2="12" stroke="var(--lat-ink,#2E2925)" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
+  <line x1="48" y1="8.5" x2="48" y2="15.5" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/><line x1="64" y1="8.5" x2="64" y2="15.5" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/><line x1="80" y1="8.5" x2="80" y2="15.5" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/><line x1="96" y1="8.5" x2="96" y2="15.5" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/><line x1="112" y1="8.5" x2="112" y2="15.5" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/><line x1="128" y1="8.5" x2="128" y2="15.5" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/><line x1="144" y1="8.5" x2="144" y2="15.5" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/><line x1="160" y1="8.5" x2="160" y2="15.5" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/><line x1="176" y1="8.5" x2="176" y2="15.5" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/><line x1="192" y1="8.5" x2="192" y2="15.5" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
+</svg>
+</file>
+
+<file path="assets/svg/divider-3-brackets.svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 24" role="img" aria-label="Divider: brackets with point">
+<!-- Latitude Tutoring brand SVG asset. Themeable via CSS vars: lat-ink, lat-accent, lat-accent-2, lat-peach -->
+  <g fill="none" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+    <path d="M 74 5 L 68 5 L 68 19 L 74 19"/>
+    <path d="M 166 5 L 172 5 L 172 19 L 166 19"/>
+    <line x1="84" y1="12" x2="112" y2="12" opacity="0.6"/>
+    <line x1="128" y1="12" x2="156" y2="12" opacity="0.6"/>
+  </g>
+  <circle cx="120" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+</svg>
+</file>
+
+<file path="assets/svg/divider-4-wave.svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 24" role="img" aria-label="Divider: wave">
+<!-- Latitude Tutoring brand SVG asset. Themeable via CSS vars: lat-ink, lat-accent, lat-accent-2, lat-peach -->
+  <path d="M 40.0 12.0 L 41.0 11.8 L 42.0 11.7 L 43.0 11.5 L 44.0 11.4 L 45.0 11.2 L 46.0 11.1 L 47.0 10.9 L 48.0 10.8 L 49.0 10.6 L 50.0 10.5 L 51.0 10.3 L 52.0 10.2 L 53.0 10.0 L 54.0 9.9 L 55.0 9.8 L 56.0 9.6 L 57.0 9.5 L 58.0 9.4 L 59.0 9.3 L 60.0 9.2 L 61.0 9.1 L 62.0 9.0 L 63.0 8.9 L 64.0 8.8 L 65.0 8.7 L 66.0 8.6 L 67.0 8.5 L 68.0 8.4 L 69.0 8.4 L 70.0 8.3 L 71.0 8.2 L 72.0 8.2 L 73.0 8.2 L 74.0 8.1 L 75.0 8.1 L 76.0 8.0 L 77.0 8.0 L 78.0 8.0 L 79.0 8.0 L 80.0 8.0 L 81.0 8.0 L 82.0 8.0 L 83.0 8.0 L 84.0 8.0 L 85.0 8.1 L 86.0 8.1 L 87.0 8.2 L 88.0 8.2 L 89.0 8.2 L 90.0 8.3 L 91.0 8.4 L 92.0 8.4 L 93.0 8.5 L 94.0 8.6 L 95.0 8.7 L 96.0 8.8 L 97.0 8.9 L 98.0 9.0 L 99.0 9.1 L 100.0 9.2 L 101.0 9.3 L 102.0 9.4 L 103.0 9.5 L 104.0 9.6 L 105.0 9.8 L 106.0 9.9 L 107.0 10.0 L 108.0 10.2 L 109.0 10.3 L 110.0 10.5 L 111.0 10.6 L 112.0 10.8 L 113.0 10.9 L 114.0 11.1 L 115.0 11.2 L 116.0 11.4 L 117.0 11.5 L 118.0 11.7 L 119.0 11.8 L 120.0 12.0 L 121.0 12.2 L 122.0 12.3 L 123.0 12.5 L 124.0 12.6 L 125.0 12.8 L 126.0 12.9 L 127.0 13.1 L 128.0 13.2 L 129.0 13.4 L 130.0 13.5 L 131.0 13.7 L 132.0 13.8 L 133.0 14.0 L 134.0 14.1 L 135.0 14.2 L 136.0 14.4 L 137.0 14.5 L 138.0 14.6 L 139.0 14.7 L 140.0 14.8 L 141.0 14.9 L 142.0 15.0 L 143.0 15.1 L 144.0 15.2 L 145.0 15.3 L 146.0 15.4 L 147.0 15.5 L 148.0 15.6 L 149.0 15.6 L 150.0 15.7 L 151.0 15.8 L 152.0 15.8 L 153.0 15.8 L 154.0 15.9 L 155.0 15.9 L 156.0 16.0 L 157.0 16.0 L 158.0 16.0 L 159.0 16.0 L 160.0 16.0 L 161.0 16.0 L 162.0 16.0 L 163.0 16.0 L 164.0 16.0 L 165.0 15.9 L 166.0 15.9 L 167.0 15.8 L 168.0 15.8 L 169.0 15.8 L 170.0 15.7 L 171.0 15.6 L 172.0 15.6 L 173.0 15.5 L 174.0 15.4 L 175.0 15.3 L 176.0 15.2 L 177.0 15.1 L 178.0 15.0 L 179.0 14.9 L 180.0 14.8 L 181.0 14.7 L 182.0 14.6 L 183.0 14.5 L 184.0 14.4 L 185.0 14.2 L 186.0 14.1 L 187.0 14.0 L 188.0 13.8 L 189.0 13.7 L 190.0 13.5 L 191.0 13.4 L 192.0 13.2 L 193.0 13.1 L 194.0 12.9 L 195.0 12.8 L 196.0 12.6 L 197.0 12.5 L 198.0 12.3 L 199.0 12.2 L 200.0 12.0" fill="none" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.8"/>
+  <circle cx="200" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+</svg>
+</file>
+
+<file path="assets/svg/divider-5-interval.svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 24" role="img" aria-label="Divider: interval midpoint">
+<!-- Latitude Tutoring brand SVG asset. Themeable via CSS vars: lat-ink, lat-accent, lat-accent-2, lat-peach -->
+  <g stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.85">
+    <line x1="52" y1="6" x2="52" y2="18"/>
+    <line x1="188" y1="6" x2="188" y2="18"/>
+    <line x1="52" y1="12" x2="112" y2="12" opacity="0.6"/>
+    <line x1="128" y1="12" x2="188" y2="12" opacity="0.6"/>
+  </g>
+  <circle cx="120" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+</svg>
+</file>
+
+<file path="assets/svg/hero-coordinate.svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 380" role="img" aria-label="Coordinate plane with a curve, its tangent, and a plotted point">
+<!-- Latitude Tutoring brand SVG asset. Themeable via CSS vars: lat-ink, lat-accent, lat-accent-2, lat-peach -->
+  <g fill="none" stroke="var(--lat-ink,#FBF6EE)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- faint gridlines -->
+    <g stroke-width="1" opacity="0.10">
+      <line x1="134.0" y1="40" x2="134.0" y2="300"/><line x1="190.0" y1="40" x2="190.0" y2="300"/><line x1="246.0" y1="40" x2="246.0" y2="300"/><line x1="302.0" y1="40" x2="302.0" y2="300"/><line x1="358.0" y1="40" x2="358.0" y2="300"/><line x1="414.0" y1="40" x2="414.0" y2="300"/>
+      <line x1="78" y1="248.0" x2="430.8" y2="248.0"/><line x1="78" y1="196.0" x2="430.8" y2="196.0"/><line x1="78" y1="144.0" x2="430.8" y2="144.0"/><line x1="78" y1="92.0" x2="430.8" y2="92.0"/><line x1="78" y1="40.0" x2="430.8" y2="40.0"/>
+    </g>
+    <!-- axes -->
+    <g stroke-width="1.6" opacity="0.75">
+      <line x1="78" y1="40" x2="78" y2="312"/>
+      <line x1="66" y1="300" x2="442.0" y2="300"/>
+      <path d="M 74 48 L 78 40 L 82 48" opacity="0.9"/>
+      <path d="M 434.0 296 L 442.0 300 L 434.0 304"/>
+    </g>
+    <!-- ticks -->
+    <g stroke-width="1.4" opacity="0.55"><line x1="134.0" y1="300" x2="134.0" y2="294"/><line x1="190.0" y1="300" x2="190.0" y2="294"/><line x1="246.0" y1="300" x2="246.0" y2="294"/><line x1="302.0" y1="300" x2="302.0" y2="294"/><line x1="358.0" y1="300" x2="358.0" y2="294"/><line x1="414.0" y1="300" x2="414.0" y2="294"/><line x1="78" y1="248.0" x2="84" y2="248.0"/><line x1="78" y1="196.0" x2="84" y2="196.0"/><line x1="78" y1="144.0" x2="84" y2="144.0"/><line x1="78" y1="92.0" x2="84" y2="92.0"/><line x1="78" y1="40.0" x2="84" y2="40.0"/></g>
+    <!-- secondary curve (sage) -->
+    <path d="M 111.6 277.1 L 116.1 276.1 L 120.6 275.1 L 125.0 274.1 L 129.5 273.1 L 134.0 272.0 L 138.5 270.8 L 143.0 269.6 L 147.4 268.4 L 151.9 267.2 L 156.4 265.9 L 160.9 264.5 L 165.4 263.1 L 169.8 261.7 L 174.3 260.2 L 178.8 258.7 L 183.3 257.1 L 187.8 255.5 L 192.2 253.8 L 196.7 252.0 L 201.2 250.2 L 205.7 248.3 L 210.2 246.4 L 214.6 244.3 L 219.1 242.3 L 223.6 240.1 L 228.1 237.9 L 232.6 235.6 L 237.0 233.2 L 241.5 230.7 L 246.0 228.2 L 250.5 225.6 L 255.0 222.9 L 259.4 220.0 L 263.9 217.1 L 268.4 214.1 L 272.9 211.0 L 277.4 207.8 L 281.8 204.5 L 286.3 201.0 L 290.8 197.5 L 295.3 193.8 L 299.8 190.0 L 304.2 186.0 L 308.7 182.0 L 313.2 177.7 L 317.7 173.4 L 322.2 168.9 L 326.6 164.2 L 331.1 159.4 L 335.6 154.4 L 340.1 149.3 L 344.6 144.0 L 349.0 138.4 L 353.5 132.7 L 358.0 126.9 L 362.5 120.8 L 367.0 114.5 L 371.4 107.9 L 375.9 101.2 L 380.4 94.2" stroke="var(--lat-accent-2,#8FA98A)" stroke-width="2" opacity="0.8"/>
+    <!-- tangent line -->
+    <line x1="275.2" y1="269.8" x2="407.2" y2="93.3" stroke="var(--lat-ink,#FBF6EE)" stroke-width="1.5" opacity="0.7" stroke-dasharray="1 7"/>
+    <!-- main curve (orange) -->
+    <path d="M 97.6 212.1 L 103.1 217.9 L 108.6 223.4 L 114.1 228.7 L 119.6 233.6 L 125.1 238.2 L 130.6 242.5 L 136.1 246.6 L 141.7 250.3 L 147.2 253.7 L 152.7 256.8 L 158.2 259.6 L 163.7 262.2 L 169.2 264.4 L 174.7 266.3 L 180.2 267.9 L 185.7 269.2 L 191.2 270.2 L 196.7 270.9 L 202.2 271.3 L 207.7 271.4 L 213.2 271.2 L 218.7 270.7 L 224.3 269.9 L 229.8 268.8 L 235.3 267.4 L 240.8 265.7 L 246.3 263.6 L 251.8 261.3 L 257.3 258.7 L 262.8 255.8 L 268.3 252.6 L 273.8 249.1 L 279.3 245.2 L 284.8 241.1 L 290.3 236.7 L 295.8 232.0 L 301.3 226.9 L 306.9 221.6 L 312.4 216.0 L 317.9 210.0 L 323.4 203.8 L 328.9 197.3 L 334.4 190.4 L 339.9 183.3 L 345.4 175.8 L 350.9 168.1 L 356.4 160.1 L 361.9 151.7 L 367.4 143.1 L 372.9 134.1 L 378.4 124.9 L 383.9 115.3 L 389.5 105.4 L 395.0 95.3 L 400.5 84.8 L 406.0 74.1 L 411.5 63.0 L 417.0 51.6 L 422.5 40.0 L 428.0 28.0" stroke="var(--lat-accent,#C4724F)" stroke-width="2.6"/>
+  </g>
+  <!-- plotted point: the brand signature -->
+  <circle cx="341.2" cy="181.5" r="6.5" fill="none" stroke="var(--lat-ink,#FBF6EE)" stroke-width="1.4" opacity="0.5"/>
+  <circle cx="341.2" cy="181.5" r="4" fill="var(--lat-accent,#C4724F)"/>
+  <!-- faint equation fragment -->
+  <text x="344.0" y="63.4" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="17" fill="var(--lat-ink,#FBF6EE)" opacity="0.42">f(x)</text>
+  <text x="76" y="32.0" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="13" fill="var(--lat-ink,#FBF6EE)" opacity="0.32">y</text>
+  <text x="438.0" y="320" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="13" fill="var(--lat-ink,#FBF6EE)" opacity="0.32">x</text>
+</svg>
+</file>
+
+<file path="assets/svg/icon-group-classes.svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Group classes">
+<!-- Latitude Tutoring brand SVG asset. Themeable via CSS vars: lat-ink, lat-accent, lat-accent-2, lat-peach -->
+  <g fill="none" stroke="var(--lat-ink,#2E2925)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="6.5" cy="7.5" r="2"/>
+    <path d="M 3.3 13.5 a 3.2 3.2 0 0 1 6.4 0"/>
+    <circle cx="12" cy="6" r="2.1"/>
+    <path d="M 8.5 12.2 a 3.5 3.5 0 0 1 7 0"/>
+    <circle cx="17.5" cy="7.5" r="2"/>
+    <path d="M 14.3 13.5 a 3.2 3.2 0 0 1 6.4 0"/>
+    <line x1="4" y1="20" x2="19" y2="20" opacity="0.85"/>
+    <circle cx="19" cy="20" r="1.5" fill="var(--lat-accent,#C4724F)" stroke="none"/>
+  </g>
+</svg>
+</file>
+
+<file path="assets/svg/icon-homework-help.svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Homework help">
+<!-- Latitude Tutoring brand SVG asset. Themeable via CSS vars: lat-ink, lat-accent, lat-accent-2, lat-peach -->
+  <g fill="none" stroke="var(--lat-ink,#2E2925)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 7 3 h 7 l 3 3 v 15 a 0 0 0 0 1 0 0 H 7 a 0 0 0 0 1 0 0 Z"/>
+    <path d="M 14 3 v 3 h 3"/>
+    <line x1="9.5" y1="11" x2="15" y2="11" opacity="0.85"/>
+    <line x1="9.5" y1="14.2" x2="15" y2="14.2" opacity="0.85"/>
+    <line x1="9.5" y1="17.4" x2="13" y2="17.4" opacity="0.85"/>
+    <circle cx="9.5" cy="11" r="1.4" fill="var(--lat-accent,#C4724F)" stroke="none"/>
+  </g>
+</svg>
+</file>
+
+<file path="assets/svg/icon-progress.svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Student progress and results">
+<!-- Latitude Tutoring brand SVG asset. Themeable via CSS vars: lat-ink, lat-accent, lat-accent-2, lat-peach -->
+  <g fill="none" stroke="var(--lat-ink,#2E2925)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="5" y1="4.5" x2="5" y2="19" opacity="0.9"/>
+    <line x1="5" y1="19" x2="20" y2="19" opacity="0.9"/>
+    <polyline points="7,16 11,12.5 15,10 18,6" stroke="var(--lat-accent,#C4724F)" stroke-width="1.9"/>
+    <circle cx="7" cy="16" r="1.3" fill="var(--lat-ink,#2E2925)" stroke="none"/>
+    <circle cx="11" cy="12.5" r="1.3" fill="var(--lat-ink,#2E2925)" stroke="none"/>
+    <circle cx="15" cy="10" r="1.3" fill="var(--lat-ink,#2E2925)" stroke="none"/>
+    <circle cx="18" cy="6" r="2" fill="var(--lat-accent,#C4724F)" stroke="none"/>
+  </g>
+</svg>
+</file>
+
+<file path="assets/svg/icon-timetable.svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Class timetable">
+<!-- Latitude Tutoring brand SVG asset. Themeable via CSS vars: lat-ink, lat-accent, lat-accent-2, lat-peach -->
+  <g fill="none" stroke="var(--lat-ink,#2E2925)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="5.5" width="16" height="14.5" rx="2"/>
+    <line x1="4" y1="10" x2="20" y2="10" opacity="0.85"/>
+    <line x1="8" y1="3.5" x2="8" y2="7"/>
+    <line x1="16" y1="3.5" x2="16" y2="7"/>
+    <rect x="6.6" y="12.2" width="3.4" height="2.6" rx="0.6" fill="var(--lat-accent,#C4724F)" stroke="none"/>
+    <line x1="12" y1="13.5" x2="17.4" y2="13.5" opacity="0.55"/>
+    <line x1="7" y1="17.3" x2="17.4" y2="17.3" opacity="0.55"/>
+  </g>
+</svg>
+</file>
+
+<file path="assets/svg/pattern-graph.svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+<!-- Latitude Tutoring brand SVG asset. Themeable via CSS vars: lat-ink, lat-accent, lat-accent-2, lat-peach -->
+  <defs>
+    <pattern id="latGraph" width="48" height="48" patternUnits="userSpaceOnUse">
+      <g stroke="var(--lat-ink,#2E2925)" fill="none" stroke-width="1">
+        <!-- minor grid every 12 -->
+        <g opacity="0.05">
+          <path d="M12 0V48 M24 0V48 M36 0V48 M0 12H48 M0 24H48 M0 36H48"/>
+        </g>
+        <!-- major grid at tile edge -->
+        <g opacity="0.09">
+          <path d="M0 0H48 M0 0V48"/>
+        </g>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="48" height="48" fill="url(#latGraph)"/>
+</svg>
+</file>
+
+<file path=".gitignore">
+# Claude
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Logs
+*.log
+</file>
+
+<file path="CNAME">
+latitudetutoring.com
+</file>
+
+<file path="js/main.js">
+/* Latitude — main.js */
+(function () {
+  'use strict';
+
+  // ── JS capability flag (used by CSS scroll reveals) ──────
+  document.documentElement.classList.add('js');
+
+  // ── Footer year ──────────────────────────────────────────
+  const yearEl = document.getElementById('footerYear');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // ── Nav: shadow on scroll ────────────────────────────────
+  const nav = document.getElementById('nav');
+  if (nav) {
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 20);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  // ── Mobile nav toggle ────────────────────────────────────
+  const burger = document.getElementById('navBurger');
+  const links  = document.getElementById('navLinks');
+  if (burger && links) {
+    burger.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      burger.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', String(open));
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // ── Scroll reveal ────────────────────────────────────────
+  const revealSelector = [
+    '.about__body',
+    '.about__aside',
+    '.mission__quote',
+    '.mission__body',
+    '.courses__intro',
+    '.courses__grid',
+    '.offer__heading',
+    '.offer__panel--primary',
+    '.offer__panel--secondary',
+    '.week__intro',
+    '.week__tracks',
+    '.week__flow',
+    '.vs__heading',
+    '.vs__body',
+    '.location__body',
+    '.location__aside',
+    '.serve__icon',
+    '.serve__heading',
+    '.serve__details',
+    '.samples__card',
+    '.timings__head',
+    '.timings__table-wrap',
+    '.pricing__inner',
+    '.enrol__steps',
+    '.feedback__inner',
+    '.faq__list',
+    '.contact__header',
+    '.contact__form',
+  ].join(', ');
+
+  const revealEls = document.querySelectorAll(revealSelector);
+
+  if ('IntersectionObserver' in window && revealEls.length) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    const viewportH = window.innerHeight;
+    revealEls.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      // Skip elements already visible on load — only animate below the fold
+      if (rect.top > viewportH * 0.85) {
+        el.setAttribute('data-reveal', '');
+        observer.observe(el);
+      }
+    });
+  }
+
+  // ── Form success detection ───────────────────────────────
+  const enquiryForm = document.getElementById('enquiryForm');
+  const formSuccess = document.getElementById('formSuccess');
+  if (enquiryForm && formSuccess) {
+    new MutationObserver(() => {
+      if (enquiryForm.style.display === 'none') {
+        formSuccess.style.display = 'flex';
+      }
+    }).observe(enquiryForm, { attributes: true, attributeFilter: ['style'] });
+  }
+
+})();
+</file>
+
+<file path="css/style.css">
+/* ============================================================
+   LATITUDE — style.css
+   Brand tokens → base reset → layout → sections → responsive
+   ============================================================ */
+
+/* ── Tokens ─────────────────────────────────────────────── */
+:root {
+  /* Warm terracotta brand palette
+     (token names kept from the original teal/navy scheme) */
+  --navy:      #3A3430;  /* warm charcoal — main text & dark sections */
+  --navy-deep: #2E2925;  /* deeper charcoal — nav & footer */
+  --teal:      #C96F4A;  /* warm terracotta — primary accent */
+  --teal-dim:  #B25E3B;  /* terracotta hover */
+  --sage:      #8FAF8F;  /* sage green — highlights, small sections */
+  --sage-dim:  #7A9A7A;
+  --peach:     #F7C9A8;  /* light peach — cards & callouts */
+  --white:     #FFFCF7;  /* off-white — main page background */
+  --off-white: #FFF4E6;  /* soft cream — alternating sections */
+  --cream:     #FBF6EE;  /* light ink for dark sections */
+  --muted:     #8A7F76;  /* warm muted grey */
+  --border:    #E7DECF;  /* warm border */
+
+  /* SVG asset theming — inline brand SVGs read these */
+  --lat-ink:      var(--navy-deep);
+  --lat-accent:   var(--teal);
+  --lat-accent-2: var(--sage);
+  --lat-peach:    var(--peach);
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans:  'Plus Jakarta Sans', system-ui, sans-serif;
+
+  --max-w: 1140px;
+  --pad-x: clamp(1.25rem, 5vw, 4rem);
+  --sec-pad: clamp(4.75rem, 9vw, 7.5rem);
+
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out-quart: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --body-text: #57514B;  /* softened charcoal for body copy */
+
+  /* Graph-paper pattern, tiled 48px — dark & light variants */
+  --pattern-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cg fill='none' stroke='%23FBF6EE'%3E%3Cpath d='M12 0V48M24 0V48M36 0V48M0 12H48M0 24H48M0 36H48' opacity='.05'/%3E%3Cpath d='M0 .5H48M.5 0V48' opacity='.09'/%3E%3C/g%3E%3C/svg%3E");
+  --pattern-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cg fill='none' stroke='%232E2925'%3E%3Cpath d='M12 0V48M24 0V48M36 0V48M0 12H48M0 24H48M0 36H48' opacity='.04'/%3E%3Cpath d='M0 .5H48M.5 0V48' opacity='.07'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ── Reset ──────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--navy);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; font: inherit; border: none; background: none; }
+ul { list-style: none; }
+
+h1, h2, h3 { text-wrap: balance; }
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.form__field input:focus-visible,
+.form__field select:focus-visible,
+.form__field textarea:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 0;
+}
+
+section {
+  scroll-margin-top: 72px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 200;
+  background: var(--navy-deep);
+  color: var(--cream);
+  padding: 0.6rem 1.1rem;
+  border-radius: 0 0 6px 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.skip-link:focus { top: 0; }
+
+/* ── Shared utilities ───────────────────────────────────── */
+.label {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 1rem;
+}
+
+.label--teal  { color: var(--teal); }
+.label--white { color: rgba(251,246,238,0.55); }
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2.1rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-radius: 4px;
+  transition: background 0.2s var(--ease), transform 0.15s var(--ease), box-shadow 0.2s var(--ease);
+}
+.btn--teal {
+  background: var(--teal);
+  color: var(--white);
+  box-shadow: 0 2px 12px rgba(201,111,74,0.25);
+}
+.btn--teal:hover {
+  background: var(--teal-dim);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(201,111,74,0.32);
+}
+.btn--teal:active { transform: translateY(0); }
+
+/* ── Brand SVG dividers ─────────────────────────────────── */
+.divider {
+  display: block;
+  width: 200px;
+  height: 20px;
+  margin: 0 auto;
+}
+.divider--left { margin: 0 0 1.25rem -25px; }  /* optically align first dot with text edge */
+.divider--brackets {
+  width: 170px;
+  margin: 0 0 1.5rem -48px;
+}
+
+/* interval-midpoint rule inside the stat card */
+.rule-svg {
+  display: block;
+  width: 100%;
+  max-width: 210px;
+  height: 22px;
+  margin: 0.35rem -18px 0.85rem;
+}
+
+/* ── Nav ────────────────────────────────────────────────── */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: var(--navy-deep);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: box-shadow 0.3s var(--ease);
+}
+.nav.scrolled {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+}
+
+.nav__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0.9rem var(--pad-x);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav__logo img {
+  height: 34px;
+  width: auto;
+  border-radius: 3px;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav__links a {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav__links a:hover { color: var(--white); }
+
+.nav__cta {
+  background: var(--teal);
+  color: var(--white) !important;
+  padding: 0.5rem 1.25rem;
+  border-radius: 3px;
+  font-weight: 600 !important;
+  transition: background 0.2s !important;
+}
+.nav__cta:hover { background: var(--teal-dim) !important; }
+
+.nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
+.nav__burger span {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: transform 0.25s var(--ease), opacity 0.2s;
+}
+
+/* ── Hero ───────────────────────────────────────────────── */
+.hero {
+  /* dark section: flip the SVG ink to cream */
+  --lat-ink: var(--cream);
+  position: relative;
+  background:
+    radial-gradient(ellipse 720px 520px at 78% 42%, rgba(201,111,74,0.13), transparent 65%),
+    var(--navy);
+  padding: calc(70px + 5.5rem) var(--pad-x) 6.5rem;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--pattern-dark);
+  /* keep the texture behind the copy only — the graphic already carries its own coordinate grid,
+     so overlapping the two here read as a busy double grid */
+  mask-image: radial-gradient(ellipse 60% 85% at 24% 45%, black 20%, transparent 60%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 85% at 24% 45%, black 20%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero__inner {
+  position: relative;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.hero__eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 1.5rem;
+}
+
+.hero__headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2.7rem, 5.8vw, 4.75rem);
+  font-weight: 800;
+  line-height: 1.06;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+.hero__headline em {
+  font-style: italic;
+  color: var(--peach);
+}
+
+.hero__sub {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  color: rgba(251,246,238,0.68);
+  max-width: 44ch;
+  margin-bottom: 2.5rem;
+  line-height: 1.75;
+}
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.hero__link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(251,246,238,0.75);
+  border-bottom: 1px solid rgba(251,246,238,0.25);
+  padding-bottom: 2px;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.hero__link:hover {
+  color: var(--peach);
+  border-color: var(--peach);
+}
+
+.hero__facts {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(251,246,238,0.12);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: rgba(251,246,238,0.55);
+  flex-wrap: wrap;
+}
+
+/* dot separator travels with each fact so it never wraps alone */
+.hero__facts > span:not(:first-child)::before {
+  content: '';
+  display: inline-block;
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--teal);
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.hero__graphic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__svg {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  filter: drop-shadow(0 12px 40px rgba(0,0,0,0.25));
+}
+
+/* ── About ──────────────────────────────────────────────── */
+.about {
+  background: var(--white);
+  padding: var(--sec-pad) var(--pad-x);
+}
+
+.about__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 5rem;
+  align-items: start;
+}
+
+.about__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--navy);
+  margin-bottom: 1.5rem;
+}
+
+.about__body p {
+  color: var(--body-text);
+  margin-bottom: 1.2rem;
+  font-size: 1.0125rem;
+  max-width: 58ch;
+}
+.about__body p strong { color: var(--navy); font-weight: 600; }
+
+.about__aside {
+  padding-top: 1rem;
+  position: sticky;
+  top: 100px;
+}
+
+.about__stat-block {
+  background: var(--peach);
+  border-radius: 10px;
+  padding: 1.85rem;
+  box-shadow: 0 10px 30px -18px rgba(58,52,48,0.4);
+}
+
+.about__stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__stat-num {
+  font-family: var(--font-serif);
+  font-size: 3.25rem;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1;
+}
+
+.about__stat-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--navy);
+  opacity: 0.75;
+  margin-top: 0.25rem;
+}
+
+.about__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.about__detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--navy);
+  font-weight: 500;
+}
+
+.about__dot {
+  display: block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+}
+
+/* ── Mission ────────────────────────────────────────────── */
+.mission {
+  background:
+    var(--pattern-light),
+    var(--off-white);
+  padding: var(--sec-pad) var(--pad-x);
+}
+
+.mission__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 2rem 6rem;
+  align-items: start;
+}
+
+.mission__inner > .label { grid-column: 1 / -1; }
+
+.mission__quote {
+  grid-column: 1;
+  font-family: var(--font-serif);
+  font-size: clamp(1.7rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.25;
+  color: var(--navy);
+  border: none;
+  padding: 0;
+}
+
+.mission__body {
+  grid-column: 2;
+  padding-top: 0.5rem;
+}
+
+.mission__body p {
+  color: var(--body-text);
+  margin-bottom: 1.2rem;
+  font-size: 1.0125rem;
+  line-height: 1.8;
+}
+
+/* ── Reusable step number badge (used in How Your Week Works, How Enrolment Works) ── */
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--teal);
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--teal);
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+/* ── Courses We Teach ───────────────────────────────────── */
+.courses {
+  background: var(--white);
+  padding: var(--sec-pad) var(--pad-x);
+}
+
+.courses__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.courses__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--navy);
+  margin-bottom: 1.25rem;
+}
+
+.courses__intro {
+  font-size: 1.0125rem;
+  color: var(--body-text);
+  max-width: 62ch;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.courses__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.courses__card {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem 2.25rem;
+}
+
+.courses__card--y12 {
+  border-color: var(--teal);
+}
+
+.courses__year {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 1.1rem;
+}
+
+.courses__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.courses__list li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.9375rem;
+  color: var(--body-text);
+  font-weight: 500;
+}
+
+/* ── What We Offer ──────────────────────────────────────── */
+.offer {
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  padding: var(--sec-pad) var(--pad-x);
+}
+
+.offer__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.offer__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--navy);
+  margin-bottom: 2.75rem;
+}
+
+.offer__panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.offer__panel {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2.25rem 2.25rem 1.6rem;
+  transition: transform 0.25s var(--ease-out-quart), box-shadow 0.25s var(--ease-out-quart);
+}
+.offer__panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px -22px rgba(58,52,48,0.35);
+}
+
+.offer__icon {
+  width: 52px; height: 52px;
+  border-radius: 12px;
+  background: var(--peach);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+}
+.offer__icon svg {
+  width: 28px; height: 28px;
+}
+.offer__panel--secondary .offer__icon {
+  background: #DDE8DD;  /* soft sage tint to pair with the sage label */
+}
+
+.offer__panel-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 0.75rem;
+}
+
+.offer__panel-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--navy);
+  margin-bottom: 0.6rem;
+}
+
+.offer__panel-meta {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 1.1rem !important;
+}
+
+.offer__panel p {
+  font-size: 0.9875rem;
+  color: var(--body-text);
+  margin-bottom: 0.9rem;
+  line-height: 1.75;
+}
+.offer__panel p strong { color: var(--navy); font-weight: 600; }
+
+.offer__panel--secondary .offer__panel-label { color: var(--sage-dim); }
+
+/* ── How Your Week Works ─────────────────────────────────── */
+.week {
+  background: var(--off-white);
+  padding: var(--sec-pad) var(--pad-x);
+}
+
+.week__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.week__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--navy);
+  margin-bottom: 1.25rem;
+}
+
+.week__intro {
+  font-size: 1.0125rem;
+  color: var(--body-text);
+  max-width: 64ch;
+  line-height: 1.8;
+  margin-bottom: 2.75rem;
+}
+
+.week__tracks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.week__track {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--teal);
+  border-radius: 0 10px 10px 0;
+  padding: 1.5rem 1.75rem;
+}
+
+.week__track--alt {
+  border-left-color: var(--sage);
+}
+
+.week__track-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 0.6rem;
+}
+
+.week__track--alt .week__track-label { color: var(--sage-dim); }
+
+.week__track p {
+  font-size: 0.9375rem;
+  color: var(--body-text);
+  line-height: 1.7;
+}
+
+.week__flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.week__flow-item p {
+  font-size: 0.9rem;
+  color: var(--body-text);
+  font-weight: 500;
+  line-height: 1.5;
+  max-width: 22ch;
+}
+
+.week__note {
+  margin-top: 2rem;
+  font-size: 0.9375rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* ── Latitude or Private ─────────────────────────────────── */
+.vs {
+  background: var(--off-white);
+  border-top: 1px solid var(--border);
+  padding: var(--sec-pad) var(--pad-x);
+}
+
+.vs__inner {
+  max-width: 72ch;
+  margin: 0 auto;
+}
+
+.vs__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 1.75rem;
+}
+
+.vs__body p {
+  font-size: 1rem;
+  color: var(--body-text);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+/* ── Where Lessons Run ───────────────────────────────────── */
+.location {
+  background: var(--white);
+  padding: var(--sec-pad) var(--pad-x);
+}
+
+.location__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 5rem;
+  align-items: start;
+}
+
+.location__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--navy);
+  margin-bottom: 1.5rem;
+}
+
+.location__body p {
+  color: var(--body-text);
+  margin-bottom: 1.2rem;
+  font-size: 1.0125rem;
+  line-height: 1.8;
+  max-width: 58ch;
+}
+.location__body p strong { color: var(--navy); font-weight: 600; }
+
+.location__suburbs {
+  font-size: 0.9375rem !important;
+  color: var(--muted) !important;
+}
+
+.location__aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  padding: 1.75rem;
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.location__fact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.location__fact-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.location__fact-value {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+/* ── Sample Materials ────────────────────────────────────── */
+.samples {
+  background: var(--white);
+  padding: var(--sec-pad) var(--pad-x);
+}
+
+.samples__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.samples__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--navy);
+  margin-bottom: 2rem;
+}
+
+.samples__card {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.samples__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  aspect-ratio: 3 / 4;
+  border: 1.5px dashed var(--border);
+  border-radius: 12px;
+  background: var(--off-white);
+  padding: 1.5rem;
+  text-align: center;
+}
+.samples__placeholder svg { width: 36px; height: 36px; }
+.samples__placeholder span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.samples__caption {
+  font-size: 1.0125rem;
+  color: var(--body-text);
+  line-height: 1.8;
+  max-width: 52ch;
+}
+
+/* ── Pricing ─────────────────────────────────────────────── */
+.pricing {
+  background: var(--off-white);
+  padding: var(--sec-pad) var(--pad-x);
+}
+
+.pricing__inner {
+  max-width: 72ch;
+  margin: 0 auto;
+}
+
+.pricing__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 1.25rem;
+}
+
+.pricing__inner p {
+  font-size: 1.0125rem;
+  color: var(--body-text);
+  line-height: 1.85;
+  max-width: 62ch;
+}
+
+/* ── How Enrolment Works ─────────────────────────────────── */
+.enrol {
+  background: var(--white);
+  padding: var(--sec-pad) var(--pad-x);
+}
+
+.enrol__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.enrol__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--navy);
+  margin-bottom: 2.75rem;
+}
+
+.enrol__steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.enrol__step h3 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+.enrol__step p {
+  font-size: 0.9rem;
+  color: var(--body-text);
+  line-height: 1.6;
+}
+
+/* ── Student & Parent Feedback ───────────────────────────── */
+.feedback {
+  background: var(--off-white);
+  padding: var(--sec-pad) var(--pad-x);
+}
+
+.feedback__inner {
+  max-width: 68ch;
+  margin: 0 auto;
+  text-align: center;
+}
+.feedback__inner .label { display: block; }
+
+.feedback__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3.2vw, 2.4rem);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 1.25rem;
+}
+
+.feedback__inner p {
+  font-size: 1.0125rem;
+  color: var(--body-text);
+  line-height: 1.85;
+}
+
+/* ── FAQ ──────────────────────────────────────────────────── */
+.faq {
+  background: var(--white);
+  padding: var(--sec-pad) var(--pad-x);
+}
+
+.faq__inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.faq__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--navy);
+  margin-bottom: 2.5rem;
+}
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--border);
+  padding: 1.15rem 0;
+}
+.faq__item:first-child { border-top: 1px solid var(--border); }
+
+.faq__item summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__item summary::after {
+  content: '+';
+  flex-shrink: 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--teal);
+  transition: transform 0.2s var(--ease);
+}
+.faq__item[open] summary::after { transform: rotate(45deg); }
+
+.faq__item p {
+  margin-top: 0.9rem;
+  font-size: 0.9375rem;
+  color: var(--body-text);
+  line-height: 1.75;
+  max-width: 68ch;
+}
+.faq__item p a { color: var(--teal); font-weight: 600; border-bottom: 1px solid rgba(201,111,74,0.35); }
+
+/* ── Class Timings ───────────────────────────────────────── */
+.timings {
+  background: var(--white);
+  padding: var(--sec-pad) var(--pad-x);
+  border-top: 1px solid var(--border);
+}
+
+.timings__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.timings__head {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 0.9rem;
+}
+
+.timings__head-icon {
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  background: var(--peach);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.timings__head-icon svg {
+  width: 30px; height: 30px;
+}
+
+.timings__eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 0.2rem;
+}
+
+.timings__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.timings__sub {
+  font-size: 0.9375rem;
+  color: var(--muted);
+  max-width: 62ch;
+  line-height: 1.65;
+  margin-bottom: 2.5rem;
+}
+
+.timings__table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.timings__table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 480px;
+}
+
+.timings__th {
+  background: var(--navy);
+  color: var(--white);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.85rem 1.25rem;
+}
+
+.timings__th--time {
+  width: 110px;
+}
+
+.timings__row {
+  border-bottom: 1px solid var(--border);
+}
+.timings__row:last-child { border-bottom: none; }
+
+.timings__time {
+  padding: 1.25rem;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.timings__time-start {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.timings__time-end {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.timings__cell {
+  padding: 1rem 1.25rem;
+  vertical-align: top;
+}
+
+/* Class cards — mirror the reference image */
+.class-card {
+  background: var(--off-white);
+  border-left: 3px solid transparent;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0 4px 4px 0;
+  display: inline-block;
+  min-width: 220px;
+}
+
+.class-card--y11 { border-left-color: var(--sage); }
+.class-card--y12 { border-left-color: var(--teal); }
+
+.class-card__year {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+.class-card__name {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.class-card--y11 .class-card__name { color: var(--sage-dim); }
+.class-card--y12 .class-card__name { color: var(--teal); }
+
+.class-card__type {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 0.15rem;
+}
+
+/* Legend */
+.timings__legend {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+}
+
+.timings__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.timings__legend-item::before {
+  content: '';
+  display: block;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.timings__legend-item--y11::before { background: var(--sage); }
+.timings__legend-item--y12::before { background: var(--teal); }
+
+/* ── Who We Serve ───────────────────────────────────────── */
+.serve {
+  /* dark section: flip the SVG ink to cream */
+  --lat-ink: var(--cream);
+  position: relative;
+  background: var(--navy);
+  padding: var(--sec-pad) var(--pad-x);
+  overflow: hidden;
+}
+.serve::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--pattern-dark);
+  mask-image: linear-gradient(115deg, transparent 35%, black 85%);
+  -webkit-mask-image: linear-gradient(115deg, transparent 35%, black 85%);
+  pointer-events: none;
+}
+
+.serve__inner {
+  position: relative;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.serve__icon {
+  width: 52px; height: 52px;
+  border-radius: 12px;
+  background: rgba(251,246,238,0.08);
+  border: 1px solid rgba(251,246,238,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.serve__icon svg {
+  width: 28px; height: 28px;
+}
+
+.serve__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--white);
+  margin: 1rem 0 0.4rem;
+}
+
+.serve__sub {
+  font-size: 1.1rem;
+  color: rgba(251,246,238,0.5);
+  margin-bottom: 3.5rem;
+  font-weight: 400;
+}
+
+.serve__details {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border-top: 1px solid rgba(251,246,238,0.1);
+  padding-top: 2.5rem;
+}
+
+.serve__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.serve__year {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.serve__note {
+  font-size: 0.9rem;
+  color: rgba(251,246,238,0.5);
+  max-width: 28ch;
+  line-height: 1.5;
+}
+
+.serve__divider {
+  width: 1px;
+  background: rgba(251,246,238,0.12);
+  margin: 0 3rem;
+}
+
+/* ── Book a Call ────────────────────────────────────────── */
+.booking {
+  background: var(--off-white);
+  padding: 6rem var(--pad-x) 3rem;
+}
+
+.booking__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.booking__header {
+  max-width: 58ch;
+  margin-bottom: 2.5rem;
+}
+
+.booking__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 2.8vw, 2.25rem);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.booking__sub {
+  font-size: 0.9375rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ── Contact ────────────────────────────────────────────── */
+.contact {
+  background: var(--off-white);
+  padding: var(--sec-pad) var(--pad-x);
+}
+
+.contact__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.contact__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+}
+
+.contact__sub {
+  font-size: 0.9375rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* Form */
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  box-shadow: 0 20px 50px -30px rgba(58,52,48,0.3);
+}
+
+.form__row { display: contents; }
+
+.form__row--two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+  width: 100%;
+}
+
+.form__row--action {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 0.4rem;
+  width: 100%;
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form__field label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.02em;
+}
+
+.form__optional {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.form__field input,
+.form__field select,
+.form__field textarea {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  color: var(--navy);
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 5px;
+  padding: 0.65rem 0.85rem;
+  outline: none;
+  transition: border-color 0.2s var(--ease);
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form__field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238A7F76' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.85rem center;
+  padding-right: 2.25rem;
+}
+
+.form__field input::placeholder,
+.form__field textarea::placeholder { color: #ADA49B; }
+
+.form__field input:focus,
+.form__field select:focus,
+.form__field textarea:focus {
+  border-color: var(--teal);
+}
+
+.form__field textarea { resize: vertical; min-height: 110px; }
+
+.form__success {
+  display: none;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--teal);
+}
+/* Formspree shows success by removing aria-hidden */
+.form__success:not([aria-hidden="true"]) { display: flex; }
+
+.form__fs-error:not(:empty) {
+  font-size: 0.85rem;
+  color: #c0392b;
+  margin-bottom: 0.75rem;
+}
+
+.form__field-error:not(:empty) {
+  display: block;
+  font-size: 0.78rem;
+  color: #c0392b;
+  margin-top: 0.25rem;
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: #c0392b;
+}
+
+.form__success-dot {
+  display: block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+}
+
+/* ── Footer ─────────────────────────────────────────────── */
+.footer {
+  background: var(--navy-deep);
+  padding: 3rem var(--pad-x) 2.5rem;
+}
+
+.footer__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.footer__divider {
+  margin: 0 auto 2rem;
+}
+
+.footer__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer__brand { display: flex; align-items: center; gap: 1.5rem; }
+
+.footer__logo {
+  height: 26px;
+  border-radius: 2px;
+  opacity: 0.9;
+}
+
+.footer__tagline {
+  font-size: 0.8125rem;
+  font-style: italic;
+  color: rgba(251,246,238,0.4);
+}
+
+.footer__meta {
+  font-size: 0.8rem;
+  color: rgba(251,246,238,0.35);
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+  }
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+  .hero__graphic {
+    order: 2;
+    margin-top: 1rem;
+  }
+  .hero__svg { max-width: 400px; }
+
+  .about__inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .about__aside { position: static; }
+  .about__stat-block { max-width: 340px; }
+
+  .mission__inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .mission__inner > .label { grid-column: 1; }
+  .mission__quote { grid-column: 1; }
+  .mission__body  { grid-column: 1; }
+
+  .offer__panels {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .courses__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .week__tracks {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .week__flow {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+  }
+
+  .location__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .location__aside { max-width: 340px; }
+
+  .samples__card {
+    grid-template-columns: 1fr;
+  }
+  .samples__placeholder { max-width: 220px; aspect-ratio: 4 / 3; }
+
+  .enrol__steps {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .contact__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero__graphic { display: none !important; }
+
+  .nav__links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    background: var(--navy-deep);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 1rem var(--pad-x) 1.5rem;
+  }
+  .nav__links.open { display: flex; }
+  .nav__links li { width: 100%; }
+  .nav__links a {
+    display: block;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .nav__cta {
+    margin-top: 0.5rem;
+    padding: 0.65rem 0 !important;
+    background: none !important;
+    color: var(--teal) !important;
+    border-bottom: none !important;
+  }
+
+  .nav__burger { display: flex; }
+
+  .hero {
+    padding-top: calc(60px + 3.5rem);
+    padding-bottom: 4rem;
+  }
+  .hero__facts { margin-top: 2.25rem; }
+  .hero__svg { max-width: 320px; }
+
+  .divider--brackets { margin-left: -34px; }
+
+  .serve__details { flex-direction: column; gap: 2rem; }
+  .serve__divider { display: none; }
+
+  .week__flow { grid-template-columns: 1fr; gap: 1.5rem; }
+  .enrol__steps { grid-template-columns: 1fr; gap: 1.75rem; }
+  .samples__card { text-align: center; justify-items: center; }
+
+  .footer__row { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .footer__brand { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+
+  /* Burger open state */
+  .nav__burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav__burger.open span:nth-child(2) { opacity: 0; }
+  .nav__burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+
+/* ── Motion & Animations ─────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes curveDraw {
+  from { stroke-dashoffset: 1; }
+  to   { stroke-dashoffset: 0; }
+}
+
+@keyframes svgFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Hero entrance */
+  .hero__eyebrow {
+    animation: fadeUp 0.65s var(--ease-out-quart) both;
+  }
+  .hero__headline {
+    animation: fadeUp 0.65s var(--ease-out-quart) 0.1s both;
+  }
+  .hero__sub {
+    animation: fadeUp 0.65s var(--ease-out-quart) 0.2s both;
+  }
+  .hero__actions {
+    animation: fadeUp 0.65s var(--ease-out-quart) 0.3s both;
+  }
+  .hero__facts {
+    animation: fadeUp 0.65s var(--ease-out-quart) 0.4s both;
+  }
+  .hero__graphic {
+    animation: fadeUp 0.9s var(--ease-out-quart) 0.25s both;
+  }
+
+  /* Hero curves draw themselves in (pathLength="1" set in markup) */
+  .hero__curve {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: curveDraw 1.6s var(--ease-out-quart) 0.7s forwards;
+  }
+  .hero__curve--alt {
+    animation-delay: 0.95s;
+    animation-duration: 1.4s;
+  }
+  .hero__tangent,
+  .hero__point {
+    opacity: 0;
+    animation: svgFade 0.6s ease-out 1.9s forwards;
+  }
+  /* preserve the asset's designed opacities once faded in */
+  .hero__tangent { animation-name: svgFadeTangent; }
+  @keyframes svgFadeTangent {
+    from { opacity: 0; }
+    to   { opacity: 0.7; }
+  }
+  .hero__point:first-of-type { animation-name: svgFadePointRing; }
+  @keyframes svgFadePointRing {
+    from { opacity: 0; }
+    to   { opacity: 0.5; }
+  }
+
+  /* Scroll reveal */
+  .js [data-reveal] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.6s var(--ease-out-quart),
+      transform 0.6s var(--ease-out-quart);
+  }
+  .js [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  .js [data-reveal-delay="1"] { transition-delay: 0.08s; }
+  .js [data-reveal-delay="2"] { transition-delay: 0.16s; }
+  .js [data-reveal-delay="3"] { transition-delay: 0.24s; }
+}
+
+/* ── Accessibility ──────────────────────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+</file>
+
+<file path="index.html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latitude | Year 11 &amp; 12 Mathematics Tutoring, Sydney North-West</title>
+  <meta name="description" content="Latitude offers small-group Year 11 and Year 12 Mathematics tutoring in Sydney's north-west, with in-person lessons in Rouse Hill and online homework-help support." />
+  <meta name="theme-color" content="#2E2925" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>document.documentElement.classList.add('js');</script>
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#enquiryForm', formId: 'mrewaeay' });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo" aria-label="Latitude home">
+        <img src="assets/logo.png" alt="Latitude" height="36" />
+      </a>
+      <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#week">How It Works</a></li>
+        <li><a href="#timings">Timings</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#booking">Book a Call</a></li>
+        <li><a href="#contact" class="nav__cta">Enquire Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__inner">
+      <div class="hero__text">
+        <p class="hero__eyebrow">Year 11 &amp; 12 Mathematics &middot; Sydney North-West</p>
+        <h1 class="hero__headline">
+          Small classes.<br />
+          <em>Real results.</em>
+        </h1>
+        <p class="hero__sub">
+          Latitude runs intimate Maths groups of 2 to 4 students, close enough for every question to matter, structured enough to cover the whole course.
+        </p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--teal">Enquire Now</a>
+          <a href="#timings" class="hero__link">View the timetable<span aria-hidden="true"> &rarr;</span></a>
+        </div>
+        <div class="hero__facts" aria-label="Key facts">
+          <span>2&ndash;4 per class</span>
+          <span>Weekly 2-hour lessons</span>
+          <span>Years 11 &amp; 12</span>
+        </div>
+      </div>
+      <div class="hero__graphic" aria-hidden="true">
+        <!-- Latitude brand asset: coordinate plane with curve, tangent & plotted point -->
+        <svg class="hero__svg" viewBox="0 0 460 380" xmlns="http://www.w3.org/2000/svg" focusable="false">
+          <g fill="none" stroke="var(--lat-ink,#FBF6EE)" stroke-linecap="round" stroke-linejoin="round">
+            <g stroke-width="1" opacity="0.10">
+              <line x1="134.0" y1="40" x2="134.0" y2="300"/><line x1="190.0" y1="40" x2="190.0" y2="300"/><line x1="246.0" y1="40" x2="246.0" y2="300"/><line x1="302.0" y1="40" x2="302.0" y2="300"/><line x1="358.0" y1="40" x2="358.0" y2="300"/><line x1="414.0" y1="40" x2="414.0" y2="300"/>
+              <line x1="78" y1="248.0" x2="430.8" y2="248.0"/><line x1="78" y1="196.0" x2="430.8" y2="196.0"/><line x1="78" y1="144.0" x2="430.8" y2="144.0"/><line x1="78" y1="92.0" x2="430.8" y2="92.0"/><line x1="78" y1="40.0" x2="430.8" y2="40.0"/>
+            </g>
+            <g stroke-width="1.6" opacity="0.75">
+              <line x1="78" y1="40" x2="78" y2="312"/>
+              <line x1="66" y1="300" x2="442.0" y2="300"/>
+              <path d="M 74 48 L 78 40 L 82 48" opacity="0.9"/>
+              <path d="M 434.0 296 L 442.0 300 L 434.0 304"/>
+            </g>
+            <g stroke-width="1.4" opacity="0.55"><line x1="134.0" y1="300" x2="134.0" y2="294"/><line x1="190.0" y1="300" x2="190.0" y2="294"/><line x1="246.0" y1="300" x2="246.0" y2="294"/><line x1="302.0" y1="300" x2="302.0" y2="294"/><line x1="358.0" y1="300" x2="358.0" y2="294"/><line x1="414.0" y1="300" x2="414.0" y2="294"/><line x1="78" y1="248.0" x2="84" y2="248.0"/><line x1="78" y1="196.0" x2="84" y2="196.0"/><line x1="78" y1="144.0" x2="84" y2="144.0"/><line x1="78" y1="92.0" x2="84" y2="92.0"/><line x1="78" y1="40.0" x2="84" y2="40.0"/></g>
+            <path class="hero__curve hero__curve--alt" pathLength="1" d="M 111.6 277.1 L 116.1 276.1 L 120.6 275.1 L 125.0 274.1 L 129.5 273.1 L 134.0 272.0 L 138.5 270.8 L 143.0 269.6 L 147.4 268.4 L 151.9 267.2 L 156.4 265.9 L 160.9 264.5 L 165.4 263.1 L 169.8 261.7 L 174.3 260.2 L 178.8 258.7 L 183.3 257.1 L 187.8 255.5 L 192.2 253.8 L 196.7 252.0 L 201.2 250.2 L 205.7 248.3 L 210.2 246.4 L 214.6 244.3 L 219.1 242.3 L 223.6 240.1 L 228.1 237.9 L 232.6 235.6 L 237.0 233.2 L 241.5 230.7 L 246.0 228.2 L 250.5 225.6 L 255.0 222.9 L 259.4 220.0 L 263.9 217.1 L 268.4 214.1 L 272.9 211.0 L 277.4 207.8 L 281.8 204.5 L 286.3 201.0 L 290.8 197.5 L 295.3 193.8 L 299.8 190.0 L 304.2 186.0 L 308.7 182.0 L 313.2 177.7 L 317.7 173.4 L 322.2 168.9 L 326.6 164.2 L 331.1 159.4 L 335.6 154.4 L 340.1 149.3 L 344.6 144.0 L 349.0 138.4 L 353.5 132.7 L 358.0 126.9 L 362.5 120.8 L 367.0 114.5 L 371.4 107.9 L 375.9 101.2 L 380.4 94.2" stroke="var(--lat-accent-2,#8FA98A)" stroke-width="2" opacity="0.8"/>
+            <line class="hero__tangent" x1="275.2" y1="269.8" x2="407.2" y2="93.3" stroke="var(--lat-ink,#FBF6EE)" stroke-width="1.5" opacity="0.7" stroke-dasharray="1 7"/>
+            <path class="hero__curve hero__curve--main" pathLength="1" d="M 97.6 212.1 L 103.1 217.9 L 108.6 223.4 L 114.1 228.7 L 119.6 233.6 L 125.1 238.2 L 130.6 242.5 L 136.1 246.6 L 141.7 250.3 L 147.2 253.7 L 152.7 256.8 L 158.2 259.6 L 163.7 262.2 L 169.2 264.4 L 174.7 266.3 L 180.2 267.9 L 185.7 269.2 L 191.2 270.2 L 196.7 270.9 L 202.2 271.3 L 207.7 271.4 L 213.2 271.2 L 218.7 270.7 L 224.3 269.9 L 229.8 268.8 L 235.3 267.4 L 240.8 265.7 L 246.3 263.6 L 251.8 261.3 L 257.3 258.7 L 262.8 255.8 L 268.3 252.6 L 273.8 249.1 L 279.3 245.2 L 284.8 241.1 L 290.3 236.7 L 295.8 232.0 L 301.3 226.9 L 306.9 221.6 L 312.4 216.0 L 317.9 210.0 L 323.4 203.8 L 328.9 197.3 L 334.4 190.4 L 339.9 183.3 L 345.4 175.8 L 350.9 168.1 L 356.4 160.1 L 361.9 151.7 L 367.4 143.1 L 372.9 134.1 L 378.4 124.9 L 383.9 115.3 L 389.5 105.4 L 395.0 95.3 L 400.5 84.8 L 406.0 74.1 L 411.5 63.0 L 417.0 51.6 L 422.5 40.0 L 428.0 28.0" stroke="var(--lat-accent,#C4724F)" stroke-width="2.6"/>
+          </g>
+          <circle class="hero__point" cx="341.2" cy="181.5" r="6.5" fill="none" stroke="var(--lat-ink,#FBF6EE)" stroke-width="1.4" opacity="0.5"/>
+          <circle class="hero__point" cx="341.2" cy="181.5" r="4" fill="var(--lat-accent,#C4724F)"/>
+          <text x="344.0" y="63.4" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="17" fill="var(--lat-ink,#FBF6EE)" opacity="0.42">f(x)</text>
+          <text x="76" y="32.0" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="13" fill="var(--lat-ink,#FBF6EE)" opacity="0.32">y</text>
+          <text x="438.0" y="320" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="13" fill="var(--lat-ink,#FBF6EE)" opacity="0.32">x</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="about__inner">
+      <div class="about__body">
+        <span class="label">What We Do</span>
+        <h2 class="about__heading">The gap isn't about<br />who's smarter</h2>
+        <p>
+          Some schools around here get one Band 6 every few years. Other schools, not that far away, get over a hundred, every single year. That gap isn't about who's smarter. It's about resourcing, and it's the thing Latitude Tutoring is trying to do something about.
+        </p>
+        <p>
+          I'm also not going to pretend I can make maths fun, school already does enough of that damage with exams and stress. What I actually want is for a couple of years of maths to be manageable enough that a student keeps showing up and keeps improving, instead of coasting through and regretting it when the ATAR comes out.
+        </p>
+      </div>
+      <div class="about__aside">
+        <div class="about__stat-block">
+          <div class="about__stat">
+            <span class="about__stat-num">2&ndash;4</span>
+            <span class="about__stat-label">students per class</span>
+          </div>
+          <!-- brand divider: interval midpoint -->
+          <svg class="rule-svg" viewBox="0 0 240 24" aria-hidden="true" focusable="false">
+            <g stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.85">
+              <line x1="52" y1="6" x2="52" y2="18"/>
+              <line x1="188" y1="6" x2="188" y2="18"/>
+              <line x1="52" y1="12" x2="112" y2="12" opacity="0.6"/>
+              <line x1="128" y1="12" x2="188" y2="12" opacity="0.6"/>
+            </g>
+            <circle cx="120" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+          </svg>
+          <div class="about__detail">
+            <div class="about__detail-item">
+              <span class="about__dot" aria-hidden="true"></span>
+              Main lesson, weekly
+            </div>
+            <div class="about__detail-item">
+              <span class="about__dot" aria-hidden="true"></span>
+              Homework-help, weekly
+            </div>
+            <div class="about__detail-item">
+              <span class="about__dot" aria-hidden="true"></span>
+              NSW syllabus-aligned
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MISSION ===== -->
+  <section class="mission" id="mission">
+    <div class="mission__inner">
+      <span class="label label--teal">Our Story</span>
+      <blockquote class="mission__quote">
+        <!-- brand divider: brackets with point -->
+        <svg class="divider divider--brackets" viewBox="0 0 240 24" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+            <path d="M 74 5 L 68 5 L 68 19 L 74 19"/>
+            <path d="M 166 5 L 172 5 L 172 19 L 166 19"/>
+            <line x1="84" y1="12" x2="112" y2="12" opacity="0.6"/>
+            <line x1="128" y1="12" x2="156" y2="12" opacity="0.6"/>
+          </g>
+          <circle cx="120" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+        </svg>
+        <p>"Your postcode<br />isn't your potential."</p>
+      </blockquote>
+      <div class="mission__body">
+        <p>
+          I did Extension 2 through my own HSC, and I'm currently studying actuarial studies. Along the way I've come across how some of the stronger performing schools structure their HSC teaching, and a lot of what I do here is built around that.
+        </p>
+        <p>
+          I grew up in this area and I still live here. I'm not flying in from somewhere else to run a franchise, I'm teaching in the same library rooms these families already use, and I don't think where someone lives should decide how far they get in this subject.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COURSES WE TEACH ===== -->
+  <section class="courses" id="courses">
+    <div class="courses__inner">
+      <!-- brand divider: plotted line -->
+      <svg class="divider divider--point divider--left" viewBox="0 0 240 24" aria-hidden="true" focusable="false">
+        <line x1="30" y1="12" x2="210" y2="12" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
+        <circle cx="30" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+        <circle cx="210" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+      </svg>
+      <span class="label">Courses We Teach</span>
+      <h2 class="courses__heading">Maths, and only maths</h2>
+      <p class="courses__intro">
+        Latitude doesn't do English, Science, or a bit of everything. It's a Maths-only tutoring centre, so every class is built around the NSW Mathematics syllabus and split by year and course level, meaning students are working alongside others doing the same course.
+      </p>
+      <div class="courses__grid">
+        <div class="courses__card">
+          <span class="courses__year">Year 11 &middot; Preliminary</span>
+          <ul class="courses__list">
+            <li><span class="about__dot" aria-hidden="true"></span>Mathematics Standard</li>
+            <li><span class="about__dot" aria-hidden="true"></span>Mathematics Advanced</li>
+            <li><span class="about__dot" aria-hidden="true"></span>Mathematics Extension</li>
+          </ul>
+        </div>
+        <div class="courses__card courses__card--y12">
+          <span class="courses__year">Year 12 &middot; HSC</span>
+          <ul class="courses__list">
+            <li><span class="about__dot" aria-hidden="true"></span>Mathematics Standard / Standard 2</li>
+            <li><span class="about__dot" aria-hidden="true"></span>Mathematics Advanced</li>
+            <li><span class="about__dot" aria-hidden="true"></span>Mathematics Extension 1</li>
+            <li><span class="about__dot" aria-hidden="true"></span>Mathematics Extension 2</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT WE OFFER ===== -->
+  <section class="offer" id="offer">
+    <div class="offer__inner">
+      <span class="label">What We Offer</span>
+      <h2 class="offer__heading">Two kinds of sessions,<br />one small group</h2>
+      <div class="offer__panels">
+        <article class="offer__panel offer__panel--primary">
+          <div class="offer__icon" aria-hidden="true">
+            <!-- brand icon: group classes -->
+            <svg viewBox="0 0 24 24" focusable="false">
+              <g fill="none" stroke="var(--lat-ink,#2E2925)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="6.5" cy="7.5" r="2"/>
+                <path d="M 3.3 13.5 a 3.2 3.2 0 0 1 6.4 0"/>
+                <circle cx="12" cy="6" r="2.1"/>
+                <path d="M 8.5 12.2 a 3.5 3.5 0 0 1 7 0"/>
+                <circle cx="17.5" cy="7.5" r="2"/>
+                <path d="M 14.3 13.5 a 3.2 3.2 0 0 1 6.4 0"/>
+                <line x1="4" y1="20" x2="19" y2="20" opacity="0.85"/>
+                <circle cx="19" cy="20" r="1.5" fill="var(--lat-accent,#C4724F)" stroke="none"/>
+              </g>
+            </svg>
+          </div>
+          <p class="offer__panel-label">Group Theory Classes</p>
+          <h3 class="offer__panel-heading">Small groups<br />2 to 4 students, 2 hours</h3>
+          <p class="offer__panel-meta">Weekly &middot; In person &middot; Rouse Hill</p>
+          <p>I go through the actual lesson content properly, the way a teacher would, but without thirty other kids in the room I can actually slow down when something isn't landing.</p>
+          <p>If one student's stuck on a concept, odds are someone else in the group is too, so we deal with it there instead of moving on because the clock says so.</p>
+        </article>
+        <article class="offer__panel offer__panel--secondary">
+          <div class="offer__icon" aria-hidden="true">
+            <!-- brand icon: homework help -->
+            <svg viewBox="0 0 24 24" focusable="false">
+              <g fill="none" stroke="var(--lat-ink,#2E2925)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M 7 3 h 7 l 3 3 v 15 a 0 0 0 0 1 0 0 H 7 a 0 0 0 0 1 0 0 Z"/>
+                <path d="M 14 3 v 3 h 3"/>
+                <line x1="9.5" y1="11" x2="15" y2="11" opacity="0.85"/>
+                <line x1="9.5" y1="14.2" x2="15" y2="14.2" opacity="0.85"/>
+                <line x1="9.5" y1="17.4" x2="13" y2="17.4" opacity="0.85"/>
+                <circle cx="9.5" cy="11" r="1.4" fill="var(--lat-accent,#C4724F)" stroke="none"/>
+              </g>
+            </svg>
+          </div>
+          <p class="offer__panel-label">Homework Help</p>
+          <h3 class="offer__panel-heading">Personalised<br />work sessions</h3>
+          <p class="offer__panel-meta">Weekly &middot; Online</p>
+          <p>Different day, same small group setup, but this one's open to anything as long as it's maths. School homework, an assessment, a topic that didn't click, doesn't have to be Latitude material at all.</p>
+          <p>It's basically a study session with someone in the room who can actually help. You get stuck, you flag it, we sort it out on the spot instead of you sitting there for twenty minutes going nowhere.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW YOUR WEEK WORKS ===== -->
+  <section class="week" id="week">
+    <div class="week__inner">
+      <span class="label">How It Works</span>
+      <h2 class="week__heading">One lesson, one homework-help<br />session, every week</h2>
+      <p class="week__intro">
+        Every enrolled student gets two things each week: a main lesson and an online homework-help session. They don't have to fall on the same day, most families book them separately around school and everything else going on.
+      </p>
+      <div class="week__tracks">
+        <div class="week__track">
+          <span class="week__track-label">Main Lesson</span>
+          <p>This is where Latitude's planned syllabus content gets taught properly, in person, in a small group, working through the course in order.</p>
+        </div>
+        <div class="week__track week__track--alt">
+          <span class="week__track-label">Homework-Help Session</span>
+          <p>Online, and open to anything maths-related: school homework, an assessment question, a topic that didn't land in class, or Latitude's own homework.</p>
+        </div>
+      </div>
+      <div class="week__flow">
+        <div class="week__flow-item">
+          <span class="step-num">1</span>
+          <p>Student attends the weekly lesson</p>
+        </div>
+        <div class="week__flow-item">
+          <span class="step-num">2</span>
+          <p>Homework goes out afterwards</p>
+        </div>
+        <div class="week__flow-item">
+          <span class="step-num">3</span>
+          <p>Homework is marked</p>
+        </div>
+        <div class="week__flow-item">
+          <span class="step-num">4</span>
+          <p>Feedback goes to the student and parent</p>
+        </div>
+      </div>
+      <p class="week__note">That last step is the one that matters most for parents, you're not left guessing how things are going, you get told.</p>
+    </div>
+  </section>
+
+  <!-- ===== LATITUDE OR PRIVATE ===== -->
+  <section class="vs" id="vs">
+    <div class="vs__inner">
+      <!-- brand divider: plotted line -->
+      <svg class="divider divider--point divider--left" viewBox="0 0 240 24" aria-hidden="true" focusable="false">
+        <line x1="30" y1="12" x2="210" y2="12" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
+        <circle cx="30" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+        <circle cx="210" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+      </svg>
+      <span class="label">Private Tutoring vs Latitude Tutoring</span>
+      <h2 class="vs__heading">An honest comparison</h2>
+      <div class="vs__body">
+        <p>I'm not going to sit here and say private tutoring doesn't work, it does, and plenty of people do well with it. But it's got a few gaps that come up a lot.</p>
+        <p>One is that most private tutors are pretty nice, which sounds like a good thing but it means they're not always going to tell a student straight up that they're falling behind. In a small group you don't need anyone to say it. You just see a mate understanding something faster than you, and that's usually enough to make you actually try.</p>
+        <p>The other is scheduling. Tutors have their own exams and their own lives, and sessions move around because of that, which is fair enough but it's not great when you're trying to build momentum before a test. Latitude runs on set times each week, if you've booked in, that session's happening.</p>
+        <p>And private tutoring is one on one the whole way through, which sounds ideal but honestly it's a lot of hours for not much extra benefit once you're past the basics. The homework help sessions here give you that same one on one style support, work on whatever you actually need, but with the group still around you, so you get both.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHERE LESSONS RUN ===== -->
+  <section class="location" id="location">
+    <div class="location__inner">
+      <div class="location__body">
+        <span class="label">Location &amp; Online Support</span>
+        <h2 class="location__heading">Where lessons run</h2>
+        <p>Main lessons are in person at <strong>Vinegar Hill Memorial Library, Rouse Hill</strong>. That's the default for the weekly lesson, though online may be available depending on the class and the student's situation, worth asking when you enquire.</p>
+        <p>Homework-help sessions run online every week, so students can join from home without needing a second trip out.</p>
+        <p class="location__suburbs">Currently taking students from across Sydney's north-west, including Rouse Hill, The Ponds, Schofields, Tallawong, Riverstone, Kellyville, Castle Hill and surrounding suburbs.</p>
+      </div>
+      <div class="location__aside">
+        <div class="location__fact">
+          <span class="location__fact-label">Main lesson</span>
+          <span class="location__fact-value">In person &middot; Rouse Hill</span>
+        </div>
+        <div class="location__fact">
+          <span class="location__fact-label">Homework-help</span>
+          <span class="location__fact-value">Online</span>
+        </div>
+        <div class="location__fact">
+          <span class="location__fact-label">Online lessons</span>
+          <span class="location__fact-value">Available in some cases</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHO WE SERVE ===== -->
+  <section class="serve" id="serve">
+    <div class="serve__inner">
+      <div class="serve__icon" aria-hidden="true">
+        <!-- brand icon: student progress -->
+        <svg viewBox="0 0 24 24" focusable="false">
+          <g fill="none" stroke="var(--lat-ink,#FBF6EE)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="4.5" x2="5" y2="19" opacity="0.9"/>
+            <line x1="5" y1="19" x2="20" y2="19" opacity="0.9"/>
+            <polyline points="7,16 11,12.5 15,10 18,6" stroke="var(--lat-accent,#C4724F)" stroke-width="1.9"/>
+            <circle cx="7" cy="16" r="1.3" fill="var(--lat-ink,#FBF6EE)" stroke="none"/>
+            <circle cx="11" cy="12.5" r="1.3" fill="var(--lat-ink,#FBF6EE)" stroke="none"/>
+            <circle cx="15" cy="10" r="1.3" fill="var(--lat-ink,#FBF6EE)" stroke="none"/>
+            <circle cx="18" cy="6" r="2" fill="var(--lat-accent,#C4724F)" stroke="none"/>
+          </g>
+        </svg>
+      </div>
+      <span class="label label--white">Who We Help</span>
+      <h2 class="serve__heading">Currently welcoming<br />Year 11 &amp; Year 12 students</h2>
+      <p class="serve__sub">across Sydney's north-west</p>
+      <div class="serve__details">
+        <div class="serve__item">
+          <span class="serve__year">Year 11</span>
+          <span class="serve__note">Build your Maths foundations before the marks count</span>
+        </div>
+        <div class="serve__divider" aria-hidden="true"></div>
+        <div class="serve__item">
+          <span class="serve__year">Year 12</span>
+          <span class="serve__note">Focused HSC Maths preparation when it matters most</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SAMPLE MATERIALS ===== -->
+  <section class="samples" id="samples">
+    <div class="samples__inner">
+      <span class="label">Sample Materials</span>
+      <h2 class="samples__heading">See the kind of work we use</h2>
+      <div class="samples__card">
+        <!-- Placeholder: swap this block for an <img src="..."> or <a href="worksheet.pdf"> once a sample is ready -->
+        <div class="samples__placeholder" id="samplePlaceholder">
+          <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+            <g fill="none" stroke="var(--lat-ink,#2E2925)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.55">
+              <path d="M 7 3 h 7 l 3 3 v 15 a 0 0 0 0 1 0 0 H 7 a 0 0 0 0 1 0 0 Z"/>
+              <path d="M 14 3 v 3 h 3"/>
+              <line x1="9.5" y1="11" x2="15" y2="11"/>
+              <line x1="9.5" y1="14.2" x2="15" y2="14.2"/>
+              <line x1="9.5" y1="17.4" x2="13" y2="17.4"/>
+            </g>
+          </svg>
+          <span>Sample worksheet coming soon</span>
+        </div>
+        <p class="samples__caption">Latitude lessons use syllabus-aligned examples, worked solutions and practice questions designed to show not just the answer, but the method behind it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CLASS TIMINGS ===== -->
+  <section class="timings" id="timings">
+    <div class="timings__inner">
+      <div class="timings__head">
+        <div class="timings__head-icon" aria-hidden="true">
+          <!-- brand icon: class timetable -->
+          <svg viewBox="0 0 24 24" focusable="false">
+            <g fill="none" stroke="var(--lat-ink,#2E2925)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="5.5" width="16" height="14.5" rx="2"/>
+              <line x1="4" y1="10" x2="20" y2="10" opacity="0.85"/>
+              <line x1="8" y1="3.5" x2="8" y2="7"/>
+              <line x1="16" y1="3.5" x2="16" y2="7"/>
+              <rect x="6.6" y="12.2" width="3.4" height="2.6" rx="0.6" fill="var(--lat-accent,#C4724F)" stroke="none"/>
+              <line x1="12" y1="13.5" x2="17.4" y2="13.5" opacity="0.55"/>
+              <line x1="7" y1="17.3" x2="17.4" y2="17.3" opacity="0.55"/>
+            </g>
+          </svg>
+        </div>
+        <div>
+          <p class="timings__eyebrow">Term 1, 2026</p>
+          <h2 class="timings__heading">Class Timetable</h2>
+        </div>
+      </div>
+      <p class="timings__sub">Group classes follow the NSW Mathematics syllabus, alternating between the main lesson and personalised homework-help sessions across the week.</p>
+      <div class="timings__table-wrap">
+        <table class="timings__table">
+          <thead>
+            <tr>
+              <th class="timings__th timings__th--time">Time</th>
+              <th class="timings__th">Sunday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="timings__row">
+              <td class="timings__time">
+                <span class="timings__time-start">9:00am</span>
+                <span class="timings__time-end">11:00am</span>
+              </td>
+              <td class="timings__cell">
+                <div class="class-card class-card--y11">
+                  <span class="class-card__year">Year 11</span>
+                  <span class="class-card__name">Preliminary Mathematics</span>
+                  <span class="class-card__type">Theory &amp; Homework Help</span>
+                </div>
+              </td>
+            </tr>
+            <tr class="timings__row">
+              <td class="timings__time">
+                <span class="timings__time-start">11:30am</span>
+                <span class="timings__time-end">1:30pm</span>
+              </td>
+              <td class="timings__cell">
+                <div class="class-card class-card--y12">
+                  <span class="class-card__year">Year 12</span>
+                  <span class="class-card__name">HSC Mathematics</span>
+                  <span class="class-card__type">Theory &amp; Homework Help</span>
+                </div>
+              </td>
+            </tr>
+            <tr class="timings__row">
+              <td class="timings__time">
+                <span class="timings__time-start">2:00pm</span>
+                <span class="timings__time-end">4:00pm</span>
+              </td>
+              <td class="timings__cell">
+                <div class="class-card class-card--y12">
+                  <span class="class-card__year">Year 12</span>
+                  <span class="class-card__name">HSC Mathematics</span>
+                  <span class="class-card__type">Homework Help</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="timings__legend">
+        <span class="timings__legend-item timings__legend-item--y11">Year 11 &ndash; Preliminary</span>
+        <span class="timings__legend-item timings__legend-item--y12">Year 12 &ndash; HSC</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="pricing" id="pricing">
+    <div class="pricing__inner">
+      <span class="label">Pricing</span>
+      <h2 class="pricing__heading">Available on enquiry</h2>
+      <p>Pricing is available on enquiry so we can match the student to the right class, course level and support option. The weekly fee covers the main lesson, homework, marking and feedback, and the weekly online homework-help session.</p>
+    </div>
+  </section>
+
+  <!-- ===== HOW ENROLMENT WORKS ===== -->
+  <section class="enrol" id="enrol">
+    <div class="enrol__inner">
+      <span class="label">How Enrolment Works</span>
+      <h2 class="enrol__heading">Getting started</h2>
+      <div class="enrol__steps">
+        <div class="enrol__step">
+          <span class="step-num">1</span>
+          <h3>Send an enquiry</h3>
+          <p>Fill in the form below with your child's year and course.</p>
+        </div>
+        <div class="enrol__step">
+          <span class="step-num">2</span>
+          <h3>We check the details</h3>
+          <p>Year level, course, and where the student's currently at.</p>
+        </div>
+        <div class="enrol__step">
+          <span class="step-num">3</span>
+          <h3>We recommend a class</h3>
+          <p>A suitable group and support option, based on what's actually needed.</p>
+        </div>
+        <div class="enrol__step">
+          <span class="step-num">4</span>
+          <h3>Start the routine</h3>
+          <p>Join a small group and begin the weekly lesson and homework-help routine.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STUDENT & PARENT FEEDBACK ===== -->
+  <section class="feedback" id="feedback">
+    <div class="feedback__inner">
+      <span class="label">Student &amp; Parent Feedback</span>
+      <h2 class="feedback__heading">Feedback coming soon</h2>
+      <p>Latitude is a new tutoring centre, and I'd rather wait and show you real feedback from real families than put something made up here in the meantime. Once classes are underway, this space will carry genuine feedback from the parents and students actually attending.</p>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq" id="faq">
+    <div class="faq__inner">
+      <!-- brand divider: plotted line -->
+      <svg class="divider divider--point divider--left" viewBox="0 0 240 24" aria-hidden="true" focusable="false">
+        <line x1="30" y1="12" x2="210" y2="12" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
+        <circle cx="30" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+        <circle cx="210" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+      </svg>
+      <span class="label">FAQ</span>
+      <h2 class="faq__heading">Common questions</h2>
+      <div class="faq__list">
+        <details class="faq__item">
+          <summary>What maths courses do you teach?</summary>
+          <p>Latitude is Maths-only: Year 11 Preliminary (Standard, Advanced, Extension) and Year 12 HSC (Standard/Standard 2, Advanced, Extension 1, Extension 2). See <a href="#courses">Courses We Teach</a> above for the full list.</p>
+        </details>
+        <details class="faq__item">
+          <summary>How many students are in each class?</summary>
+          <p>Classes run small, 2 to 4 students, so there's room for actual questions instead of just watching a whiteboard.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Where are lessons held?</summary>
+          <p>Main lessons are in person at Vinegar Hill Memorial Library, Rouse Hill.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Are online lessons available?</summary>
+          <p>In some cases, yes, it depends on the class and the student's situation. Homework-help sessions run online every week regardless.</p>
+        </details>
+        <details class="faq__item">
+          <summary>What is the homework-help session?</summary>
+          <p>A weekly online session where students can bring school homework, an assessment question, a topic that didn't click, or Latitude's own homework.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Can students bring school homework or assessment questions?</summary>
+          <p>Yes, that's exactly what the homework-help session is for. It doesn't have to be Latitude material.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Do you give and mark homework?</summary>
+          <p>Yes. Homework goes out after the main lesson and is marked.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Do parents receive feedback?</summary>
+          <p>Yes. Feedback on marked homework goes to both the student and the parent, so you're not left guessing how things are going.</p>
+        </details>
+        <details class="faq__item">
+          <summary>What happens if a student misses a class?</summary>
+          <p>A replacement isn't guaranteed, but if the same lesson is running again on another day and there's space, the student may be able to attend that one instead. Otherwise, the online homework-help session is there to catch up on whatever was missed.</p>
+        </details>
+        <details class="faq__item">
+          <summary>How much does tutoring cost?</summary>
+          <p>Pricing is available on enquiry, so we can match the student to the right class, course and support option before quoting a fee.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Can students join mid-term?</summary>
+          <p>Often, yes, it depends on space in the right group. Enquire and we'll let you know what's currently available.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOOK A CALL ===== -->
+  <section class="booking" id="booking">
+    <div class="booking__inner">
+      <div class="booking__header">
+        <span class="label">Free Consultation</span>
+        <h2 class="booking__heading">Book a free 30-minute call</h2>
+        <p class="booking__sub">Not sure if Latitude is the right fit? Book a free call and we'll walk you through how it works, answer any questions, and help you figure out the best option for your student.</p>
+      </div>
+      <div class="calendly-inline-widget" data-url="https://calendly.com/tutoringlatitude/30min" style="min-width:320px;height:700px;"></div>
+    </div>
+  </section>
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="contact__inner">
+      <div class="contact__header">
+        <!-- brand divider: plotted line -->
+        <svg class="divider divider--point divider--left" viewBox="0 0 240 24" aria-hidden="true" focusable="false">
+          <line x1="30" y1="12" x2="210" y2="12" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
+          <circle cx="30" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+          <circle cx="210" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+        </svg>
+        <span class="label">Get in Touch</span>
+        <h2 class="contact__heading">Enquire about a place</h2>
+        <p class="contact__sub">Fill in your details and we'll get back to you within one business day.</p>
+      </div>
+      <form class="contact__form" id="enquiryForm" novalidate>
+        <div data-fs-error class="form__fs-error" role="alert" aria-live="polite"></div>
+        <div class="form__row form__row--two">
+          <div class="form__field">
+            <label for="fname">Parent / student name</label>
+            <input type="text" id="fname" name="name" placeholder="Alex Smith" autocomplete="name" required data-fs-field />
+            <span data-fs-error="name" class="form__field-error"></span>
+          </div>
+          <div class="form__field">
+            <label for="femail">Email address</label>
+            <input type="email" id="femail" name="email" placeholder="alex@example.com" autocomplete="email" required data-fs-field />
+            <span data-fs-error="email" class="form__field-error"></span>
+          </div>
+        </div>
+        <div class="form__row form__row--two">
+          <div class="form__field">
+            <label for="fphone">Phone number</label>
+            <input type="tel" id="fphone" name="phone" placeholder="04xx xxx xxx" autocomplete="tel" data-fs-field />
+          </div>
+          <div class="form__field">
+            <label for="fyear">Student year group</label>
+            <select id="fyear" name="year" data-fs-field>
+              <option value="">Select year&hellip;</option>
+              <option value="11">Year 11</option>
+              <option value="12">Year 12</option>
+            </select>
+          </div>
+        </div>
+        <div class="form__row form__row--two">
+          <div class="form__field">
+            <label for="fcourse">Maths course level</label>
+            <select id="fcourse" name="course" data-fs-field>
+              <option value="">Select course&hellip;</option>
+              <option value="standard">Mathematics Standard</option>
+              <option value="standard-2">Mathematics Standard 2 (Year 12 only)</option>
+              <option value="advanced">Mathematics Advanced</option>
+              <option value="extension-11">Mathematics Extension (Year 11)</option>
+              <option value="extension-1">Mathematics Extension 1 (Year 12)</option>
+              <option value="extension-2">Mathematics Extension 2 (Year 12)</option>
+              <option value="unsure">Not sure yet</option>
+            </select>
+          </div>
+          <div class="form__field">
+            <label for="fsupport">Preferred support</label>
+            <select id="fsupport" name="support" data-fs-field>
+              <option value="">Select preferred support&hellip;</option>
+              <option value="in-person">In-person lesson</option>
+              <option value="online">Online support</option>
+              <option value="homework-help">Homework help</option>
+              <option value="unsure">Unsure</option>
+            </select>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__field">
+            <label for="fmessage">Message <span class="form__optional">(optional)</span></label>
+            <textarea id="fmessage" name="message" rows="4" placeholder="Tell us a bit about your Maths course and what you're working on…" data-fs-field></textarea>
+          </div>
+        </div>
+        <div class="form__row form__row--action">
+          <button type="submit" class="btn btn--teal" data-fs-submit-btn>Send Enquiry</button>
+        </div>
+        <div class="form__success" id="formSuccess" role="alert" aria-live="polite" style="display:none">
+          <span class="form__success-dot" aria-hidden="true"></span>
+          Thanks, we'll be in touch shortly.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <!-- brand divider: plotted line -->
+      <svg class="divider divider--point footer__divider" viewBox="0 0 240 24" aria-hidden="true" focusable="false">
+        <line x1="30" y1="12" x2="210" y2="12" stroke="var(--lat-ink,#FBF6EE)" stroke-width="1.4" stroke-linecap="round" opacity="0.5"/>
+        <circle cx="30" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+        <circle cx="210" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+      </svg>
+      <div class="footer__row">
+        <div class="footer__brand">
+          <img src="assets/logo.png" alt="Latitude" class="footer__logo" height="28" />
+          <p class="footer__tagline">Your postcode isn't your potential.</p>
+        </div>
+        <div class="footer__meta">
+          <p>&copy; <span id="footerYear"></span> Latitude Tutoring. Sydney, NSW.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+</file>
+
+</files>
