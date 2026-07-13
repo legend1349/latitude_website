@@ -348,6 +348,31 @@ latitudetutoring.com
     });
   }
 
+  // ── Calendly: load the widget only when the booking section nears view ──
+  const calendlyEl = document.querySelector('.calendly-inline-widget');
+  if (calendlyEl) {
+    let calendlyLoaded = false;
+    const loadCalendly = () => {
+      if (calendlyLoaded) return;
+      calendlyLoaded = true;
+      const s = document.createElement('script');
+      s.src = 'https://assets.calendly.com/assets/external/widget.js';
+      s.async = true;
+      document.body.appendChild(s);
+    };
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries, obs) => {
+        if (entries.some(e => e.isIntersecting)) {
+          loadCalendly();
+          obs.disconnect();
+        }
+      }, { rootMargin: '600px 0px' });
+      io.observe(calendlyEl);
+    } else {
+      loadCalendly();
+    }
+  }
+
   // ── Form success detection ───────────────────────────────
   const enquiryForm = document.getElementById('enquiryForm');
   const formSuccess = document.getElementById('formSuccess');
@@ -370,38 +395,51 @@ latitudetutoring.com
 
 /* ── Tokens ─────────────────────────────────────────────── */
 :root {
-  /* Warm terracotta brand palette
-     (token names kept from the original teal/navy scheme) */
-  --navy:      #3A3430;  /* warm charcoal — main text & dark sections */
-  --navy-deep: #2E2925;  /* deeper charcoal — nav & footer */
-  --teal:      #C96F4A;  /* warm terracotta — primary accent */
-  --teal-dim:  #B25E3B;  /* terracotta hover */
-  --sage:      #8FAF8F;  /* sage green — highlights, small sections */
-  --sage-dim:  #7A9A7A;
+  /* Palette — anchored to the logo: charcoal wordmark, cream ground, terracotta rule.
+     Secondary accent is a cartographic "meridian blue" (latitude lines on a chart). */
+  --ink:          #3A3430;  /* warm charcoal — main text & dark sections */
+  --ink-deep:     #2E2925;  /* deeper charcoal — nav & footer */
+  --accent:       #C96F4A;  /* warm terracotta — primary accent */
+  --accent-dim:   #A85832;  /* darker terracotta — hover & small text on cream */
+  --accent-2:     #54748E;  /* meridian blue — secondary accent */
+  --accent-2-dim: #44607A;  /* text-safe blue (AA on cream) */
   --peach:     #F7C9A8;  /* light peach — cards & callouts */
   --white:     #FFFCF7;  /* off-white — main page background */
-  --off-white: #FFF4E6;  /* soft cream — alternating sections */
+  --off-white: #FAF4EB;  /* soft cream — alternating sections */
   --cream:     #FBF6EE;  /* light ink for dark sections */
   --muted:     #8A7F76;  /* warm muted grey */
   --border:    #E7DECF;  /* warm border */
+  --body-text: #57514B;  /* softened charcoal for body copy */
 
   /* SVG asset theming — inline brand SVGs read these */
-  --lat-ink:      var(--navy-deep);
-  --lat-accent:   var(--teal);
-  --lat-accent-2: var(--sage);
+  --lat-ink:      var(--ink-deep);
+  --lat-accent:   var(--accent);
+  --lat-accent-2: var(--accent-2);
   --lat-peach:    var(--peach);
 
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans:  'Plus Jakarta Sans', system-ui, sans-serif;
 
+  /* Type scale */
+  --h-hero:    clamp(2.7rem, 5.8vw, 4.75rem);
+  --h-section: clamp(1.85rem, 3.2vw, 2.6rem);
+  --h-minor:   clamp(1.5rem, 2.5vw, 2.05rem);
+  --body-size: 1rem;
+
+  /* Rhythm */
   --max-w: 1140px;
   --pad-x: clamp(1.25rem, 5vw, 4rem);
   --sec-pad: clamp(4.75rem, 9vw, 7.5rem);
+  --gap-heading: 1.5rem;   /* heading → following copy */
+  --gap-content: 2.75rem;  /* heading or intro → cards & grids */
+
+  /* Radii */
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 12px;
 
   --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --ease-out-quart: cubic-bezier(0.16, 1, 0.3, 1);
-
-  --body-text: #57514B;  /* softened charcoal for body copy */
 
   /* Graph-paper pattern, tiled 48px — dark & light variants */
   --pattern-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cg fill='none' stroke='%23FBF6EE'%3E%3Cpath d='M12 0V48M24 0V48M36 0V48M0 12H48M0 24H48M0 36H48' opacity='.05'/%3E%3Cpath d='M0 .5H48M.5 0V48' opacity='.09'/%3E%3C/g%3E%3C/svg%3E");
@@ -420,7 +458,7 @@ body {
   font-family: var(--font-sans);
   font-size: 1rem;
   line-height: 1.7;
-  color: var(--navy);
+  color: var(--ink);
   background: var(--white);
   overflow-x: hidden;
 }
@@ -433,7 +471,7 @@ ul { list-style: none; }
 h1, h2, h3 { text-wrap: balance; }
 
 :focus-visible {
-  outline: 2px solid var(--teal);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -441,7 +479,7 @@ h1, h2, h3 { text-wrap: balance; }
 .form__field input:focus-visible,
 .form__field select:focus-visible,
 .form__field textarea:focus-visible {
-  outline: 2px solid var(--teal);
+  outline: 2px solid var(--accent);
   outline-offset: 0;
 }
 
@@ -454,10 +492,10 @@ section {
   top: -100%;
   left: 1rem;
   z-index: 200;
-  background: var(--navy-deep);
+  background: var(--ink-deep);
   color: var(--cream);
   padding: 0.6rem 1.1rem;
-  border-radius: 0 0 6px 6px;
+  border-radius: 0 0 var(--r-sm) var(--r-sm);
   font-size: 0.85rem;
   font-weight: 600;
 }
@@ -471,11 +509,11 @@ section {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--accent);
   margin-bottom: 1rem;
 }
 
-.label--teal  { color: var(--teal); }
+.label--accent { color: var(--accent); }
 .label--white { color: rgba(251,246,238,0.55); }
 
 .btn {
@@ -485,20 +523,20 @@ section {
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.04em;
-  border-radius: 4px;
+  border-radius: var(--r-sm);
   transition: background 0.2s var(--ease), transform 0.15s var(--ease), box-shadow 0.2s var(--ease);
 }
-.btn--teal {
-  background: var(--teal);
+.btn--accent {
+  background: var(--accent);
   color: var(--white);
   box-shadow: 0 2px 12px rgba(201,111,74,0.25);
 }
-.btn--teal:hover {
-  background: var(--teal-dim);
+.btn--accent:hover {
+  background: var(--accent-dim);
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(201,111,74,0.32);
 }
-.btn--teal:active { transform: translateY(0); }
+.btn--accent:active { transform: translateY(0); }
 
 /* ── Brand SVG dividers ─────────────────────────────────── */
 .divider {
@@ -527,7 +565,7 @@ section {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  background: var(--navy-deep);
+  background: var(--ink-deep);
   border-bottom: 1px solid rgba(255,255,255,0.06);
   transition: box-shadow 0.3s var(--ease);
 }
@@ -548,7 +586,9 @@ section {
 .nav__logo img {
   height: 34px;
   width: auto;
-  border-radius: 3px;
+  border-radius: var(--r-sm);
+  /* the PNG bakes in a cream ground — a soft ring makes the chip read as deliberate */
+  box-shadow: 0 0 0 1px rgba(251,246,238,0.14);
 }
 
 .nav__links {
@@ -564,15 +604,18 @@ section {
 }
 .nav__links a:hover { color: var(--white); }
 
-.nav__cta {
-  background: var(--teal);
-  color: var(--white) !important;
+.nav__links a.nav__cta {
+  background: var(--accent);
+  color: var(--white);
   padding: 0.5rem 1.25rem;
-  border-radius: 3px;
-  font-weight: 600 !important;
-  transition: background 0.2s !important;
+  border-radius: var(--r-sm);
+  font-weight: 600;
+  transition: background 0.2s;
 }
-.nav__cta:hover { background: var(--teal-dim) !important; }
+.nav__links a.nav__cta:hover {
+  background: var(--accent-dim);
+  color: var(--white);
+}
 
 .nav__burger {
   display: none;
@@ -595,7 +638,7 @@ section {
   position: relative;
   background:
     radial-gradient(ellipse 720px 520px at 78% 42%, rgba(201,111,74,0.13), transparent 65%),
-    var(--navy);
+    var(--ink);
   padding: calc(70px + 5.5rem) var(--pad-x) 6.5rem;
   min-height: 92vh;
   display: flex;
@@ -630,13 +673,13 @@ section {
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--accent);
   margin-bottom: 1.5rem;
 }
 
 .hero__headline {
   font-family: var(--font-serif);
-  font-size: clamp(2.7rem, 5.8vw, 4.75rem);
+  font-size: var(--h-hero);
   font-weight: 800;
   line-height: 1.06;
   color: var(--white);
@@ -695,7 +738,7 @@ section {
   display: inline-block;
   width: 4px; height: 4px;
   border-radius: 50%;
-  background: var(--teal);
+  background: var(--accent);
   margin-right: 1rem;
   vertical-align: middle;
 }
@@ -730,20 +773,20 @@ section {
 
 .about__heading {
   font-family: var(--font-serif);
-  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-size: var(--h-section);
   font-weight: 700;
   line-height: 1.18;
-  color: var(--navy);
-  margin-bottom: 1.5rem;
+  color: var(--ink);
+  margin-bottom: var(--gap-heading);
 }
 
 .about__body p {
   color: var(--body-text);
   margin-bottom: 1.2rem;
-  font-size: 1.0125rem;
+  font-size: var(--body-size);
   max-width: 58ch;
 }
-.about__body p strong { color: var(--navy); font-weight: 600; }
+.about__body p strong { color: var(--ink); font-weight: 600; }
 
 .about__aside {
   padding-top: 1rem;
@@ -753,7 +796,7 @@ section {
 
 .about__stat-block {
   background: var(--peach);
-  border-radius: 10px;
+  border-radius: var(--r-lg);
   padding: 1.85rem;
   box-shadow: 0 10px 30px -18px rgba(58,52,48,0.4);
 }
@@ -767,7 +810,7 @@ section {
   font-family: var(--font-serif);
   font-size: 3.25rem;
   font-weight: 800;
-  color: var(--navy);
+  color: var(--ink);
   line-height: 1;
 }
 
@@ -776,7 +819,7 @@ section {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--navy);
+  color: var(--ink);
   opacity: 0.75;
   margin-top: 0.25rem;
 }
@@ -792,7 +835,7 @@ section {
   align-items: center;
   gap: 0.6rem;
   font-size: 0.9rem;
-  color: var(--navy);
+  color: var(--ink);
   font-weight: 500;
 }
 
@@ -800,7 +843,7 @@ section {
   display: block;
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: var(--teal);
+  background: var(--accent);
   flex-shrink: 0;
 }
 
@@ -831,7 +874,7 @@ section {
   font-weight: 700;
   font-style: italic;
   line-height: 1.25;
-  color: var(--navy);
+  color: var(--ink);
   border: none;
   padding: 0;
 }
@@ -844,7 +887,7 @@ section {
 .mission__body p {
   color: var(--body-text);
   margin-bottom: 1.2rem;
-  font-size: 1.0125rem;
+  font-size: var(--body-size);
   line-height: 1.8;
 }
 
@@ -856,11 +899,11 @@ section {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1.5px solid var(--teal);
+  border: 1.5px solid var(--accent);
   font-family: var(--font-serif);
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--teal);
+  color: var(--accent);
   margin-bottom: 1rem;
   flex-shrink: 0;
 }
@@ -878,19 +921,19 @@ section {
 
 .courses__heading {
   font-family: var(--font-serif);
-  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-size: var(--h-section);
   font-weight: 700;
   line-height: 1.18;
-  color: var(--navy);
-  margin-bottom: 1.25rem;
+  color: var(--ink);
+  margin-bottom: var(--gap-heading);
 }
 
 .courses__intro {
-  font-size: 1.0125rem;
+  font-size: var(--body-size);
   color: var(--body-text);
   max-width: 62ch;
   line-height: 1.8;
-  margin-bottom: 2.5rem;
+  margin-bottom: var(--gap-content);
 }
 
 .courses__grid {
@@ -902,12 +945,12 @@ section {
 .courses__card {
   background: var(--off-white);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: var(--r-lg);
   padding: 2rem 2.25rem;
 }
 
 .courses__card--y12 {
-  border-color: var(--teal);
+  border-color: var(--accent);
 }
 
 .courses__year {
@@ -915,7 +958,7 @@ section {
   font-family: var(--font-serif);
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--ink);
   margin-bottom: 1.1rem;
 }
 
@@ -936,8 +979,7 @@ section {
 
 /* ── What We Offer ──────────────────────────────────────── */
 .offer {
-  background: var(--white);
-  border-top: 1px solid var(--border);
+  background: var(--off-white);
   padding: var(--sec-pad) var(--pad-x);
 }
 
@@ -948,11 +990,11 @@ section {
 
 .offer__heading {
   font-family: var(--font-serif);
-  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-size: var(--h-section);
   font-weight: 700;
   line-height: 1.18;
-  color: var(--navy);
-  margin-bottom: 2.75rem;
+  color: var(--ink);
+  margin-bottom: var(--gap-content);
 }
 
 .offer__panels {
@@ -963,9 +1005,9 @@ section {
 }
 
 .offer__panel {
-  background: var(--off-white);
+  background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: var(--r-lg);
   padding: 2.25rem 2.25rem 1.6rem;
   transition: transform 0.25s var(--ease-out-quart), box-shadow 0.25s var(--ease-out-quart);
 }
@@ -976,7 +1018,7 @@ section {
 
 .offer__icon {
   width: 52px; height: 52px;
-  border-radius: 12px;
+  border-radius: var(--r-lg);
   background: var(--peach);
   display: flex;
   align-items: center;
@@ -987,7 +1029,7 @@ section {
   width: 28px; height: 28px;
 }
 .offer__panel--secondary .offer__icon {
-  background: #DDE8DD;  /* soft sage tint to pair with the sage label */
+  background: #DCE5EC;  /* soft blue tint to pair with the meridian-blue label */
 }
 
 .offer__panel-label {
@@ -995,7 +1037,7 @@ section {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--accent);
   margin-bottom: 0.75rem;
 }
 
@@ -1004,30 +1046,30 @@ section {
   font-size: clamp(1.35rem, 2.2vw, 1.7rem);
   font-weight: 700;
   line-height: 1.2;
-  color: var(--navy);
+  color: var(--ink);
   margin-bottom: 0.6rem;
 }
 
-.offer__panel-meta {
+.offer__panel .offer__panel-meta {
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--muted);
-  margin-bottom: 1.1rem !important;
+  margin-bottom: 1.1rem;
 }
 
 .offer__panel p {
-  font-size: 0.9875rem;
+  font-size: var(--body-size);
   color: var(--body-text);
   margin-bottom: 0.9rem;
   line-height: 1.75;
 }
-.offer__panel p strong { color: var(--navy); font-weight: 600; }
+.offer__panel p strong { color: var(--ink); font-weight: 600; }
 
-.offer__panel--secondary .offer__panel-label { color: var(--sage-dim); }
+.offer__panel--secondary .offer__panel-label { color: var(--accent-2-dim); }
 
 /* ── How Your Week Works ─────────────────────────────────── */
 .week {
-  background: var(--off-white);
+  background: var(--white);
   padding: var(--sec-pad) var(--pad-x);
 }
 
@@ -1038,19 +1080,19 @@ section {
 
 .week__heading {
   font-family: var(--font-serif);
-  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-size: var(--h-section);
   font-weight: 700;
   line-height: 1.18;
-  color: var(--navy);
-  margin-bottom: 1.25rem;
+  color: var(--ink);
+  margin-bottom: var(--gap-heading);
 }
 
 .week__intro {
-  font-size: 1.0125rem;
+  font-size: var(--body-size);
   color: var(--body-text);
   max-width: 64ch;
   line-height: 1.8;
-  margin-bottom: 2.75rem;
+  margin-bottom: var(--gap-content);
 }
 
 .week__tracks {
@@ -1061,15 +1103,15 @@ section {
 }
 
 .week__track {
-  background: var(--white);
+  background: var(--off-white);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--teal);
-  border-radius: 0 10px 10px 0;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
   padding: 1.5rem 1.75rem;
 }
 
 .week__track--alt {
-  border-left-color: var(--sage);
+  border-left-color: var(--accent-2);
 }
 
 .week__track-label {
@@ -1078,11 +1120,11 @@ section {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--accent);
   margin-bottom: 0.6rem;
 }
 
-.week__track--alt .week__track-label { color: var(--sage-dim); }
+.week__track--alt .week__track-label { color: var(--accent-2-dim); }
 
 .week__track p {
   font-size: 0.9375rem;
@@ -1116,7 +1158,6 @@ section {
 /* ── Latitude or Private ─────────────────────────────────── */
 .vs {
   background: var(--off-white);
-  border-top: 1px solid var(--border);
   padding: var(--sec-pad) var(--pad-x);
 }
 
@@ -1127,14 +1168,14 @@ section {
 
 .vs__heading {
   font-family: var(--font-serif);
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-size: var(--h-minor);
   font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 1.75rem;
+  color: var(--ink);
+  margin-bottom: var(--gap-heading);
 }
 
 .vs__body p {
-  font-size: 1rem;
+  font-size: var(--body-size);
   color: var(--body-text);
   line-height: 1.85;
   margin-bottom: 1.25rem;
@@ -1157,25 +1198,25 @@ section {
 
 .location__heading {
   font-family: var(--font-serif);
-  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-size: var(--h-section);
   font-weight: 700;
   line-height: 1.18;
-  color: var(--navy);
-  margin-bottom: 1.5rem;
+  color: var(--ink);
+  margin-bottom: var(--gap-heading);
 }
 
 .location__body p {
   color: var(--body-text);
   margin-bottom: 1.2rem;
-  font-size: 1.0125rem;
+  font-size: var(--body-size);
   line-height: 1.8;
   max-width: 58ch;
 }
-.location__body p strong { color: var(--navy); font-weight: 600; }
+.location__body p strong { color: var(--ink); font-weight: 600; }
 
-.location__suburbs {
-  font-size: 0.9375rem !important;
-  color: var(--muted) !important;
+.location__body .location__suburbs {
+  font-size: 0.9375rem;
+  color: var(--muted);
 }
 
 .location__aside {
@@ -1185,7 +1226,7 @@ section {
   padding: 1.75rem;
   background: var(--off-white);
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: var(--r-lg);
 }
 
 .location__fact {
@@ -1205,12 +1246,12 @@ section {
 .location__fact-value {
   font-size: 0.9375rem;
   font-weight: 600;
-  color: var(--navy);
+  color: var(--ink);
 }
 
 /* ── Sample Materials ────────────────────────────────────── */
 .samples {
-  background: var(--white);
+  background: var(--off-white);
   padding: var(--sec-pad) var(--pad-x);
 }
 
@@ -1221,11 +1262,11 @@ section {
 
 .samples__heading {
   font-family: var(--font-serif);
-  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-size: var(--h-section);
   font-weight: 700;
   line-height: 1.18;
-  color: var(--navy);
-  margin-bottom: 2rem;
+  color: var(--ink);
+  margin-bottom: var(--gap-content);
 }
 
 .samples__card {
@@ -1243,8 +1284,8 @@ section {
   gap: 0.85rem;
   aspect-ratio: 3 / 4;
   border: 1.5px dashed var(--border);
-  border-radius: 12px;
-  background: var(--off-white);
+  border-radius: var(--r-lg);
+  background: var(--white);
   padding: 1.5rem;
   text-align: center;
 }
@@ -1256,7 +1297,7 @@ section {
 }
 
 .samples__caption {
-  font-size: 1.0125rem;
+  font-size: var(--body-size);
   color: var(--body-text);
   line-height: 1.8;
   max-width: 52ch;
@@ -1275,14 +1316,14 @@ section {
 
 .pricing__heading {
   font-family: var(--font-serif);
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-size: var(--h-minor);
   font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 1.25rem;
+  color: var(--ink);
+  margin-bottom: var(--gap-heading);
 }
 
 .pricing__inner p {
-  font-size: 1.0125rem;
+  font-size: var(--body-size);
   color: var(--body-text);
   line-height: 1.85;
   max-width: 62ch;
@@ -1301,11 +1342,11 @@ section {
 
 .enrol__heading {
   font-family: var(--font-serif);
-  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-size: var(--h-section);
   font-weight: 700;
   line-height: 1.18;
-  color: var(--navy);
-  margin-bottom: 2.75rem;
+  color: var(--ink);
+  margin-bottom: var(--gap-content);
 }
 
 .enrol__steps {
@@ -1318,7 +1359,7 @@ section {
   font-family: var(--font-serif);
   font-size: 1.15rem;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--ink);
   margin-bottom: 0.5rem;
 }
 
@@ -1343,14 +1384,14 @@ section {
 
 .feedback__heading {
   font-family: var(--font-serif);
-  font-size: clamp(1.85rem, 3.2vw, 2.4rem);
+  font-size: var(--h-minor);
   font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 1.25rem;
+  color: var(--ink);
+  margin-bottom: var(--gap-heading);
 }
 
 .feedback__inner p {
-  font-size: 1.0125rem;
+  font-size: var(--body-size);
   color: var(--body-text);
   line-height: 1.85;
 }
@@ -1368,11 +1409,11 @@ section {
 
 .faq__heading {
   font-family: var(--font-serif);
-  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-size: var(--h-section);
   font-weight: 700;
   line-height: 1.18;
-  color: var(--navy);
-  margin-bottom: 2.5rem;
+  color: var(--ink);
+  margin-bottom: var(--gap-content);
 }
 
 .faq__list {
@@ -1393,10 +1434,12 @@ section {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  font-size: 1rem;
+  font-size: var(--body-size);
   font-weight: 600;
-  color: var(--navy);
+  color: var(--ink);
+  transition: color 0.2s var(--ease);
 }
+.faq__item summary:hover { color: var(--accent-dim); }
 .faq__item summary::-webkit-details-marker { display: none; }
 .faq__item summary::after {
   content: '+';
@@ -1404,7 +1447,7 @@ section {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1;
-  color: var(--teal);
+  color: var(--accent);
   transition: transform 0.2s var(--ease);
 }
 .faq__item[open] summary::after { transform: rotate(45deg); }
@@ -1416,13 +1459,12 @@ section {
   line-height: 1.75;
   max-width: 68ch;
 }
-.faq__item p a { color: var(--teal); font-weight: 600; border-bottom: 1px solid rgba(201,111,74,0.35); }
+.faq__item p a { color: var(--accent); font-weight: 600; border-bottom: 1px solid rgba(201,111,74,0.35); }
 
 /* ── Class Timings ───────────────────────────────────────── */
 .timings {
   background: var(--white);
   padding: var(--sec-pad) var(--pad-x);
-  border-top: 1px solid var(--border);
 }
 
 .timings__inner {
@@ -1439,7 +1481,7 @@ section {
 
 .timings__head-icon {
   width: 56px; height: 56px;
-  border-radius: 14px;
+  border-radius: var(--r-lg);
   background: var(--peach);
   display: flex;
   align-items: center;
@@ -1455,15 +1497,15 @@ section {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--accent);
   margin-bottom: 0.2rem;
 }
 
 .timings__heading {
   font-family: var(--font-serif);
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-size: var(--h-section);
   font-weight: 700;
-  color: var(--navy);
+  color: var(--ink);
 }
 
 .timings__sub {
@@ -1478,7 +1520,7 @@ section {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: var(--r-lg);
 }
 
 .timings__table {
@@ -1488,7 +1530,7 @@ section {
 }
 
 .timings__th {
-  background: var(--navy);
+  background: var(--ink);
   color: var(--white);
   font-family: var(--font-sans);
   font-size: 0.875rem;
@@ -1516,7 +1558,7 @@ section {
   display: block;
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--ink);
 }
 
 .timings__time-end {
@@ -1535,13 +1577,13 @@ section {
   background: var(--off-white);
   border-left: 3px solid transparent;
   padding: 0.65rem 0.85rem;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
   display: inline-block;
   min-width: 220px;
 }
 
-.class-card--y11 { border-left-color: var(--sage); }
-.class-card--y12 { border-left-color: var(--teal); }
+.class-card--y11 { border-left-color: var(--accent-2); }
+.class-card--y12 { border-left-color: var(--accent); }
 
 .class-card__year {
   display: block;
@@ -1558,8 +1600,8 @@ section {
   font-size: 0.9rem;
   font-weight: 600;
 }
-.class-card--y11 .class-card__name { color: var(--sage-dim); }
-.class-card--y12 .class-card__name { color: var(--teal); }
+.class-card--y11 .class-card__name { color: var(--accent-2-dim); }
+.class-card--y12 .class-card__name { color: var(--accent-dim); }
 
 .class-card__type {
   display: block;
@@ -1593,15 +1635,15 @@ section {
   border-radius: 50%;
   flex-shrink: 0;
 }
-.timings__legend-item--y11::before { background: var(--sage); }
-.timings__legend-item--y12::before { background: var(--teal); }
+.timings__legend-item--y11::before { background: var(--accent-2); }
+.timings__legend-item--y12::before { background: var(--accent); }
 
 /* ── Who We Serve ───────────────────────────────────────── */
 .serve {
   /* dark section: flip the SVG ink to cream */
   --lat-ink: var(--cream);
   position: relative;
-  background: var(--navy);
+  background: var(--ink);
   padding: var(--sec-pad) var(--pad-x);
   overflow: hidden;
 }
@@ -1623,7 +1665,7 @@ section {
 
 .serve__icon {
   width: 52px; height: 52px;
-  border-radius: 12px;
+  border-radius: var(--r-lg);
   background: rgba(251,246,238,0.08);
   border: 1px solid rgba(251,246,238,0.12);
   display: flex;
@@ -1637,7 +1679,7 @@ section {
 
 .serve__heading {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-size: var(--h-section);
   font-weight: 800;
   line-height: 1.15;
   color: var(--white);
@@ -1687,9 +1729,10 @@ section {
 }
 
 /* ── Book a Call ────────────────────────────────────────── */
+/* Booking + contact share one continuous cream zone at the end of the page */
 .booking {
   background: var(--off-white);
-  padding: 6rem var(--pad-x) 3rem;
+  padding: var(--sec-pad) var(--pad-x) 3rem;
 }
 
 .booking__inner {
@@ -1704,9 +1747,9 @@ section {
 
 .booking__heading {
   font-family: var(--font-serif);
-  font-size: clamp(1.6rem, 2.8vw, 2.25rem);
+  font-size: var(--h-minor);
   font-weight: 700;
-  color: var(--navy);
+  color: var(--ink);
   margin-bottom: 0.75rem;
   line-height: 1.2;
 }
@@ -1720,7 +1763,7 @@ section {
 /* ── Contact ────────────────────────────────────────────── */
 .contact {
   background: var(--off-white);
-  padding: var(--sec-pad) var(--pad-x);
+  padding: 3.5rem var(--pad-x) var(--sec-pad);
 }
 
 .contact__inner {
@@ -1734,10 +1777,10 @@ section {
 
 .contact__heading {
   font-family: var(--font-serif);
-  font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+  font-size: var(--h-minor);
   font-weight: 700;
   line-height: 1.25;
-  color: var(--navy);
+  color: var(--ink);
   margin-bottom: 0.75rem;
 }
 
@@ -1754,7 +1797,7 @@ section {
   gap: 1.1rem;
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: var(--r-lg);
   padding: clamp(1.5rem, 3.5vw, 2.5rem);
   box-shadow: 0 20px 50px -30px rgba(58,52,48,0.3);
 }
@@ -1785,7 +1828,7 @@ section {
 .form__field label {
   font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--navy);
+  color: var(--ink);
   letter-spacing: 0.02em;
 }
 
@@ -1799,10 +1842,10 @@ section {
 .form__field textarea {
   font-family: var(--font-sans);
   font-size: 0.9375rem;
-  color: var(--navy);
+  color: var(--ink);
   background: var(--white);
   border: 1.5px solid var(--border);
-  border-radius: 5px;
+  border-radius: var(--r-sm);
   padding: 0.65rem 0.85rem;
   outline: none;
   transition: border-color 0.2s var(--ease);
@@ -1824,7 +1867,7 @@ section {
 .form__field input:focus,
 .form__field select:focus,
 .form__field textarea:focus {
-  border-color: var(--teal);
+  border-color: var(--accent);
 }
 
 .form__field textarea { resize: vertical; min-height: 110px; }
@@ -1835,7 +1878,7 @@ section {
   gap: 0.6rem;
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--teal);
+  color: var(--accent);
 }
 /* Formspree shows success by removing aria-hidden */
 .form__success:not([aria-hidden="true"]) { display: flex; }
@@ -1863,13 +1906,13 @@ textarea[aria-invalid="true"] {
   display: block;
   width: 8px; height: 8px;
   border-radius: 50%;
-  background: var(--teal);
+  background: var(--accent);
   flex-shrink: 0;
 }
 
 /* ── Footer ─────────────────────────────────────────────── */
 .footer {
-  background: var(--navy-deep);
+  background: var(--ink-deep);
   padding: 3rem var(--pad-x) 2.5rem;
 }
 
@@ -1879,6 +1922,8 @@ textarea[aria-invalid="true"] {
 }
 
 .footer__divider {
+  /* dark footer: divider line reads in cream at reduced strength */
+  --lat-ink: rgba(251, 246, 238, 0.6);
   margin: 0 auto 2rem;
 }
 
@@ -1893,7 +1938,7 @@ textarea[aria-invalid="true"] {
 
 .footer__logo {
   height: 26px;
-  border-radius: 2px;
+  border-radius: var(--r-sm);
   opacity: 0.9;
 }
 
@@ -1979,7 +2024,7 @@ textarea[aria-invalid="true"] {
 }
 
 @media (max-width: 640px) {
-  .hero__graphic { display: none !important; }
+  .hero__graphic { display: none; }
 
   .nav__links {
     display: none;
@@ -1989,7 +2034,7 @@ textarea[aria-invalid="true"] {
     position: absolute;
     top: 100%;
     left: 0; right: 0;
-    background: var(--navy-deep);
+    background: var(--ink-deep);
     border-top: 1px solid rgba(255,255,255,0.06);
     padding: 1rem var(--pad-x) 1.5rem;
   }
@@ -2000,12 +2045,16 @@ textarea[aria-invalid="true"] {
     padding: 0.65rem 0;
     border-bottom: 1px solid rgba(255,255,255,0.06);
   }
-  .nav__cta {
+  .nav__links a.nav__cta {
     margin-top: 0.5rem;
-    padding: 0.65rem 0 !important;
-    background: none !important;
-    color: var(--teal) !important;
-    border-bottom: none !important;
+    padding: 0.65rem 0;
+    background: none;
+    color: var(--accent);
+    border-bottom: none;
+  }
+  .nav__links a.nav__cta:hover {
+    background: none;
+    color: var(--accent-dim);
   }
 
   .nav__burger { display: flex; }
@@ -2150,7 +2199,18 @@ textarea[aria-invalid="true"] {
 </head>
 <body>
 
-  <a class="skip-link" href="#about">Skip to content</a>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <!-- Shared brand SVG defs: plotted-line divider, referenced via <use> below -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <g id="divider-point">
+        <line x1="30" y1="12" x2="210" y2="12" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
+        <circle cx="30" cy="12" r="3.4" fill="var(--lat-accent,#C96F4A)"/>
+        <circle cx="210" cy="12" r="3.4" fill="var(--lat-accent,#C96F4A)"/>
+      </g>
+    </defs>
+  </svg>
 
   <!-- ===== NAV ===== -->
   <nav class="nav" id="nav">
@@ -2173,6 +2233,8 @@ textarea[aria-invalid="true"] {
     </div>
   </nav>
 
+  <main id="content" tabindex="-1">
+
   <!-- ===== HERO ===== -->
   <section class="hero" id="hero">
     <div class="hero__inner">
@@ -2186,7 +2248,7 @@ textarea[aria-invalid="true"] {
           Latitude runs intimate Maths groups of 2 to 4 students, close enough for every question to matter, structured enough to cover the whole course.
         </p>
         <div class="hero__actions">
-          <a href="#contact" class="btn btn--teal">Enquire Now</a>
+          <a href="#contact" class="btn btn--accent">Enquire Now</a>
           <a href="#timings" class="hero__link">View the timetable<span aria-hidden="true"> &rarr;</span></a>
         </div>
         <div class="hero__facts" aria-label="Key facts">
@@ -2210,12 +2272,12 @@ textarea[aria-invalid="true"] {
               <path d="M 434.0 296 L 442.0 300 L 434.0 304"/>
             </g>
             <g stroke-width="1.4" opacity="0.55"><line x1="134.0" y1="300" x2="134.0" y2="294"/><line x1="190.0" y1="300" x2="190.0" y2="294"/><line x1="246.0" y1="300" x2="246.0" y2="294"/><line x1="302.0" y1="300" x2="302.0" y2="294"/><line x1="358.0" y1="300" x2="358.0" y2="294"/><line x1="414.0" y1="300" x2="414.0" y2="294"/><line x1="78" y1="248.0" x2="84" y2="248.0"/><line x1="78" y1="196.0" x2="84" y2="196.0"/><line x1="78" y1="144.0" x2="84" y2="144.0"/><line x1="78" y1="92.0" x2="84" y2="92.0"/><line x1="78" y1="40.0" x2="84" y2="40.0"/></g>
-            <path class="hero__curve hero__curve--alt" pathLength="1" d="M 111.6 277.1 L 116.1 276.1 L 120.6 275.1 L 125.0 274.1 L 129.5 273.1 L 134.0 272.0 L 138.5 270.8 L 143.0 269.6 L 147.4 268.4 L 151.9 267.2 L 156.4 265.9 L 160.9 264.5 L 165.4 263.1 L 169.8 261.7 L 174.3 260.2 L 178.8 258.7 L 183.3 257.1 L 187.8 255.5 L 192.2 253.8 L 196.7 252.0 L 201.2 250.2 L 205.7 248.3 L 210.2 246.4 L 214.6 244.3 L 219.1 242.3 L 223.6 240.1 L 228.1 237.9 L 232.6 235.6 L 237.0 233.2 L 241.5 230.7 L 246.0 228.2 L 250.5 225.6 L 255.0 222.9 L 259.4 220.0 L 263.9 217.1 L 268.4 214.1 L 272.9 211.0 L 277.4 207.8 L 281.8 204.5 L 286.3 201.0 L 290.8 197.5 L 295.3 193.8 L 299.8 190.0 L 304.2 186.0 L 308.7 182.0 L 313.2 177.7 L 317.7 173.4 L 322.2 168.9 L 326.6 164.2 L 331.1 159.4 L 335.6 154.4 L 340.1 149.3 L 344.6 144.0 L 349.0 138.4 L 353.5 132.7 L 358.0 126.9 L 362.5 120.8 L 367.0 114.5 L 371.4 107.9 L 375.9 101.2 L 380.4 94.2" stroke="var(--lat-accent-2,#8FA98A)" stroke-width="2" opacity="0.8"/>
+            <path class="hero__curve hero__curve--alt" pathLength="1" d="M 111.6 277.1 L 116.1 276.1 L 120.6 275.1 L 125.0 274.1 L 129.5 273.1 L 134.0 272.0 L 138.5 270.8 L 143.0 269.6 L 147.4 268.4 L 151.9 267.2 L 156.4 265.9 L 160.9 264.5 L 165.4 263.1 L 169.8 261.7 L 174.3 260.2 L 178.8 258.7 L 183.3 257.1 L 187.8 255.5 L 192.2 253.8 L 196.7 252.0 L 201.2 250.2 L 205.7 248.3 L 210.2 246.4 L 214.6 244.3 L 219.1 242.3 L 223.6 240.1 L 228.1 237.9 L 232.6 235.6 L 237.0 233.2 L 241.5 230.7 L 246.0 228.2 L 250.5 225.6 L 255.0 222.9 L 259.4 220.0 L 263.9 217.1 L 268.4 214.1 L 272.9 211.0 L 277.4 207.8 L 281.8 204.5 L 286.3 201.0 L 290.8 197.5 L 295.3 193.8 L 299.8 190.0 L 304.2 186.0 L 308.7 182.0 L 313.2 177.7 L 317.7 173.4 L 322.2 168.9 L 326.6 164.2 L 331.1 159.4 L 335.6 154.4 L 340.1 149.3 L 344.6 144.0 L 349.0 138.4 L 353.5 132.7 L 358.0 126.9 L 362.5 120.8 L 367.0 114.5 L 371.4 107.9 L 375.9 101.2 L 380.4 94.2" stroke="var(--lat-accent-2,#54748E)" stroke-width="2" opacity="0.8"/>
             <line class="hero__tangent" x1="275.2" y1="269.8" x2="407.2" y2="93.3" stroke="var(--lat-ink,#FBF6EE)" stroke-width="1.5" opacity="0.7" stroke-dasharray="1 7"/>
-            <path class="hero__curve hero__curve--main" pathLength="1" d="M 97.6 212.1 L 103.1 217.9 L 108.6 223.4 L 114.1 228.7 L 119.6 233.6 L 125.1 238.2 L 130.6 242.5 L 136.1 246.6 L 141.7 250.3 L 147.2 253.7 L 152.7 256.8 L 158.2 259.6 L 163.7 262.2 L 169.2 264.4 L 174.7 266.3 L 180.2 267.9 L 185.7 269.2 L 191.2 270.2 L 196.7 270.9 L 202.2 271.3 L 207.7 271.4 L 213.2 271.2 L 218.7 270.7 L 224.3 269.9 L 229.8 268.8 L 235.3 267.4 L 240.8 265.7 L 246.3 263.6 L 251.8 261.3 L 257.3 258.7 L 262.8 255.8 L 268.3 252.6 L 273.8 249.1 L 279.3 245.2 L 284.8 241.1 L 290.3 236.7 L 295.8 232.0 L 301.3 226.9 L 306.9 221.6 L 312.4 216.0 L 317.9 210.0 L 323.4 203.8 L 328.9 197.3 L 334.4 190.4 L 339.9 183.3 L 345.4 175.8 L 350.9 168.1 L 356.4 160.1 L 361.9 151.7 L 367.4 143.1 L 372.9 134.1 L 378.4 124.9 L 383.9 115.3 L 389.5 105.4 L 395.0 95.3 L 400.5 84.8 L 406.0 74.1 L 411.5 63.0 L 417.0 51.6 L 422.5 40.0 L 428.0 28.0" stroke="var(--lat-accent,#C4724F)" stroke-width="2.6"/>
+            <path class="hero__curve hero__curve--main" pathLength="1" d="M 97.6 212.1 L 103.1 217.9 L 108.6 223.4 L 114.1 228.7 L 119.6 233.6 L 125.1 238.2 L 130.6 242.5 L 136.1 246.6 L 141.7 250.3 L 147.2 253.7 L 152.7 256.8 L 158.2 259.6 L 163.7 262.2 L 169.2 264.4 L 174.7 266.3 L 180.2 267.9 L 185.7 269.2 L 191.2 270.2 L 196.7 270.9 L 202.2 271.3 L 207.7 271.4 L 213.2 271.2 L 218.7 270.7 L 224.3 269.9 L 229.8 268.8 L 235.3 267.4 L 240.8 265.7 L 246.3 263.6 L 251.8 261.3 L 257.3 258.7 L 262.8 255.8 L 268.3 252.6 L 273.8 249.1 L 279.3 245.2 L 284.8 241.1 L 290.3 236.7 L 295.8 232.0 L 301.3 226.9 L 306.9 221.6 L 312.4 216.0 L 317.9 210.0 L 323.4 203.8 L 328.9 197.3 L 334.4 190.4 L 339.9 183.3 L 345.4 175.8 L 350.9 168.1 L 356.4 160.1 L 361.9 151.7 L 367.4 143.1 L 372.9 134.1 L 378.4 124.9 L 383.9 115.3 L 389.5 105.4 L 395.0 95.3 L 400.5 84.8 L 406.0 74.1 L 411.5 63.0 L 417.0 51.6 L 422.5 40.0 L 428.0 28.0" stroke="var(--lat-accent,#C96F4A)" stroke-width="2.6"/>
           </g>
           <circle class="hero__point" cx="341.2" cy="181.5" r="6.5" fill="none" stroke="var(--lat-ink,#FBF6EE)" stroke-width="1.4" opacity="0.5"/>
-          <circle class="hero__point" cx="341.2" cy="181.5" r="4" fill="var(--lat-accent,#C4724F)"/>
+          <circle class="hero__point" cx="341.2" cy="181.5" r="4" fill="var(--lat-accent,#C96F4A)"/>
           <text x="344.0" y="63.4" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="17" fill="var(--lat-ink,#FBF6EE)" opacity="0.42">f(x)</text>
           <text x="76" y="32.0" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="13" fill="var(--lat-ink,#FBF6EE)" opacity="0.32">y</text>
           <text x="438.0" y="320" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="13" fill="var(--lat-ink,#FBF6EE)" opacity="0.32">x</text>
@@ -2251,7 +2313,7 @@ textarea[aria-invalid="true"] {
               <line x1="52" y1="12" x2="112" y2="12" opacity="0.6"/>
               <line x1="128" y1="12" x2="188" y2="12" opacity="0.6"/>
             </g>
-            <circle cx="120" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+            <circle cx="120" cy="12" r="3.4" fill="var(--lat-accent,#C96F4A)"/>
           </svg>
           <div class="about__detail">
             <div class="about__detail-item">
@@ -2275,7 +2337,7 @@ textarea[aria-invalid="true"] {
   <!-- ===== MISSION ===== -->
   <section class="mission" id="mission">
     <div class="mission__inner">
-      <span class="label label--teal">Our Story</span>
+      <span class="label label--accent">Our Story</span>
       <blockquote class="mission__quote">
         <!-- brand divider: brackets with point -->
         <svg class="divider divider--brackets" viewBox="0 0 240 24" aria-hidden="true" focusable="false">
@@ -2285,7 +2347,7 @@ textarea[aria-invalid="true"] {
             <line x1="84" y1="12" x2="112" y2="12" opacity="0.6"/>
             <line x1="128" y1="12" x2="156" y2="12" opacity="0.6"/>
           </g>
-          <circle cx="120" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+          <circle cx="120" cy="12" r="3.4" fill="var(--lat-accent,#C96F4A)"/>
         </svg>
         <p>"Your postcode<br />isn't your potential."</p>
       </blockquote>
@@ -2305,9 +2367,7 @@ textarea[aria-invalid="true"] {
     <div class="courses__inner">
       <!-- brand divider: plotted line -->
       <svg class="divider divider--point divider--left" viewBox="0 0 240 24" aria-hidden="true" focusable="false">
-        <line x1="30" y1="12" x2="210" y2="12" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
-        <circle cx="30" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
-        <circle cx="210" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+        <use href="#divider-point"/>
       </svg>
       <span class="label">Courses We Teach</span>
       <h2 class="courses__heading">Maths, and only maths</h2>
@@ -2354,7 +2414,7 @@ textarea[aria-invalid="true"] {
                 <circle cx="17.5" cy="7.5" r="2"/>
                 <path d="M 14.3 13.5 a 3.2 3.2 0 0 1 6.4 0"/>
                 <line x1="4" y1="20" x2="19" y2="20" opacity="0.85"/>
-                <circle cx="19" cy="20" r="1.5" fill="var(--lat-accent,#C4724F)" stroke="none"/>
+                <circle cx="19" cy="20" r="1.5" fill="var(--lat-accent,#C96F4A)" stroke="none"/>
               </g>
             </svg>
           </div>
@@ -2374,7 +2434,7 @@ textarea[aria-invalid="true"] {
                 <line x1="9.5" y1="11" x2="15" y2="11" opacity="0.85"/>
                 <line x1="9.5" y1="14.2" x2="15" y2="14.2" opacity="0.85"/>
                 <line x1="9.5" y1="17.4" x2="13" y2="17.4" opacity="0.85"/>
-                <circle cx="9.5" cy="11" r="1.4" fill="var(--lat-accent,#C4724F)" stroke="none"/>
+                <circle cx="9.5" cy="11" r="1.4" fill="var(--lat-accent,#C96F4A)" stroke="none"/>
               </g>
             </svg>
           </div>
@@ -2433,9 +2493,7 @@ textarea[aria-invalid="true"] {
     <div class="vs__inner">
       <!-- brand divider: plotted line -->
       <svg class="divider divider--point divider--left" viewBox="0 0 240 24" aria-hidden="true" focusable="false">
-        <line x1="30" y1="12" x2="210" y2="12" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
-        <circle cx="30" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
-        <circle cx="210" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+        <use href="#divider-point"/>
       </svg>
       <span class="label">Private Tutoring vs Latitude Tutoring</span>
       <h2 class="vs__heading">An honest comparison</h2>
@@ -2484,11 +2542,11 @@ textarea[aria-invalid="true"] {
           <g fill="none" stroke="var(--lat-ink,#FBF6EE)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
             <line x1="5" y1="4.5" x2="5" y2="19" opacity="0.9"/>
             <line x1="5" y1="19" x2="20" y2="19" opacity="0.9"/>
-            <polyline points="7,16 11,12.5 15,10 18,6" stroke="var(--lat-accent,#C4724F)" stroke-width="1.9"/>
+            <polyline points="7,16 11,12.5 15,10 18,6" stroke="var(--lat-accent,#C96F4A)" stroke-width="1.9"/>
             <circle cx="7" cy="16" r="1.3" fill="var(--lat-ink,#FBF6EE)" stroke="none"/>
             <circle cx="11" cy="12.5" r="1.3" fill="var(--lat-ink,#FBF6EE)" stroke="none"/>
             <circle cx="15" cy="10" r="1.3" fill="var(--lat-ink,#FBF6EE)" stroke="none"/>
-            <circle cx="18" cy="6" r="2" fill="var(--lat-accent,#C4724F)" stroke="none"/>
+            <circle cx="18" cy="6" r="2" fill="var(--lat-accent,#C96F4A)" stroke="none"/>
           </g>
         </svg>
       </div>
@@ -2545,7 +2603,7 @@ textarea[aria-invalid="true"] {
               <line x1="4" y1="10" x2="20" y2="10" opacity="0.85"/>
               <line x1="8" y1="3.5" x2="8" y2="7"/>
               <line x1="16" y1="3.5" x2="16" y2="7"/>
-              <rect x="6.6" y="12.2" width="3.4" height="2.6" rx="0.6" fill="var(--lat-accent,#C4724F)" stroke="none"/>
+              <rect x="6.6" y="12.2" width="3.4" height="2.6" rx="0.6" fill="var(--lat-accent,#C96F4A)" stroke="none"/>
               <line x1="12" y1="13.5" x2="17.4" y2="13.5" opacity="0.55"/>
               <line x1="7" y1="17.3" x2="17.4" y2="17.3" opacity="0.55"/>
             </g>
@@ -2668,9 +2726,7 @@ textarea[aria-invalid="true"] {
     <div class="faq__inner">
       <!-- brand divider: plotted line -->
       <svg class="divider divider--point divider--left" viewBox="0 0 240 24" aria-hidden="true" focusable="false">
-        <line x1="30" y1="12" x2="210" y2="12" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
-        <circle cx="30" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
-        <circle cx="210" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+        <use href="#divider-point"/>
       </svg>
       <span class="label">FAQ</span>
       <h2 class="faq__heading">Common questions</h2>
@@ -2734,7 +2790,7 @@ textarea[aria-invalid="true"] {
       <div class="calendly-inline-widget" data-url="https://calendly.com/tutoringlatitude/30min" style="min-width:320px;height:700px;"></div>
     </div>
   </section>
-  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <!-- Calendly's widget.js is lazy-loaded by js/main.js when this section nears the viewport -->
 
   <!-- ===== CONTACT ===== -->
   <section class="contact" id="contact">
@@ -2742,9 +2798,7 @@ textarea[aria-invalid="true"] {
       <div class="contact__header">
         <!-- brand divider: plotted line -->
         <svg class="divider divider--point divider--left" viewBox="0 0 240 24" aria-hidden="true" focusable="false">
-          <line x1="30" y1="12" x2="210" y2="12" stroke="var(--lat-ink,#2E2925)" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
-          <circle cx="30" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
-          <circle cx="210" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+          <use href="#divider-point"/>
         </svg>
         <span class="label">Get in Touch</span>
         <h2 class="contact__heading">Enquire about a place</h2>
@@ -2810,7 +2864,7 @@ textarea[aria-invalid="true"] {
           </div>
         </div>
         <div class="form__row form__row--action">
-          <button type="submit" class="btn btn--teal" data-fs-submit-btn>Send Enquiry</button>
+          <button type="submit" class="btn btn--accent" data-fs-submit-btn>Send Enquiry</button>
         </div>
         <div class="form__success" id="formSuccess" role="alert" aria-live="polite" style="display:none">
           <span class="form__success-dot" aria-hidden="true"></span>
@@ -2820,14 +2874,14 @@ textarea[aria-invalid="true"] {
     </div>
   </section>
 
+  </main>
+
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="footer__inner">
-      <!-- brand divider: plotted line -->
+      <!-- brand divider: plotted line (cream line via --lat-ink override in CSS) -->
       <svg class="divider divider--point footer__divider" viewBox="0 0 240 24" aria-hidden="true" focusable="false">
-        <line x1="30" y1="12" x2="210" y2="12" stroke="var(--lat-ink,#FBF6EE)" stroke-width="1.4" stroke-linecap="round" opacity="0.5"/>
-        <circle cx="30" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
-        <circle cx="210" cy="12" r="3.4" fill="var(--lat-accent,#C4724F)"/>
+        <use href="#divider-point"/>
       </svg>
       <div class="footer__row">
         <div class="footer__brand">

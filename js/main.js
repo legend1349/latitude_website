@@ -90,6 +90,31 @@
     });
   }
 
+  // ── Calendly: load the widget only when the booking section nears view ──
+  const calendlyEl = document.querySelector('.calendly-inline-widget');
+  if (calendlyEl) {
+    let calendlyLoaded = false;
+    const loadCalendly = () => {
+      if (calendlyLoaded) return;
+      calendlyLoaded = true;
+      const s = document.createElement('script');
+      s.src = 'https://assets.calendly.com/assets/external/widget.js';
+      s.async = true;
+      document.body.appendChild(s);
+    };
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries, obs) => {
+        if (entries.some(e => e.isIntersecting)) {
+          loadCalendly();
+          obs.disconnect();
+        }
+      }, { rootMargin: '600px 0px' });
+      io.observe(calendlyEl);
+    } else {
+      loadCalendly();
+    }
+  }
+
   // ── Form success detection ───────────────────────────────
   const enquiryForm = document.getElementById('enquiryForm');
   const formSuccess = document.getElementById('formSuccess');

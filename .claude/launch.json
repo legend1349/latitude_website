@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "latitude-site",
-      "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "3001", "--directory", "C:\\Users\\Gaming PC\\Documents\\website"],
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "3001", "--directory", "/Users/upraa/Documents/latitude_website"],
       "port": 3001
     }
   ]
