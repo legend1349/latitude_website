@@ -893,17 +893,35 @@ section {
   justify-content: center;
   gap: 0.85rem;
   aspect-ratio: 3 / 4;
-  border: 1.5px dashed var(--border);
+  border: 1.5px solid var(--border);
   border-radius: var(--r-lg);
   background: var(--white);
   padding: 1.5rem;
   text-align: center;
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+.samples__placeholder:hover,
+.samples__placeholder:focus-visible {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -20px rgba(58,52,48,0.4);
 }
 .samples__placeholder svg { width: 36px; height: 36px; }
+.samples__placeholder svg g { transition: stroke 0.2s var(--ease), opacity 0.2s var(--ease); }
+.samples__placeholder:hover svg g,
+.samples__placeholder:focus-visible svg g {
+  stroke: var(--accent);
+  opacity: 0.9;
+}
 .samples__placeholder span {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--muted);
+  transition: color 0.2s var(--ease);
+}
+.samples__placeholder:hover span,
+.samples__placeholder:focus-visible span {
+  color: var(--accent);
 }
 
 .samples__caption {

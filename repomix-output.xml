@@ -53,6 +53,7 @@ assets/
     icon-progress.svg
     icon-timetable.svg
     pattern-graph.svg
+  latitude-sample-booklet.pdf
   logo.jpeg
   logo.png
 css/
@@ -1283,17 +1284,35 @@ section {
   justify-content: center;
   gap: 0.85rem;
   aspect-ratio: 3 / 4;
-  border: 1.5px dashed var(--border);
+  border: 1.5px solid var(--border);
   border-radius: var(--r-lg);
   background: var(--white);
   padding: 1.5rem;
   text-align: center;
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+.samples__placeholder:hover,
+.samples__placeholder:focus-visible {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -20px rgba(58,52,48,0.4);
 }
 .samples__placeholder svg { width: 36px; height: 36px; }
+.samples__placeholder svg g { transition: stroke 0.2s var(--ease), opacity 0.2s var(--ease); }
+.samples__placeholder:hover svg g,
+.samples__placeholder:focus-visible svg g {
+  stroke: var(--accent);
+  opacity: 0.9;
+}
 .samples__placeholder span {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--muted);
+  transition: color 0.2s var(--ease);
+}
+.samples__placeholder:hover span,
+.samples__placeholder:focus-visible span {
+  color: var(--accent);
 }
 
 .samples__caption {
@@ -2573,8 +2592,7 @@ textarea[aria-invalid="true"] {
       <span class="label">Sample Materials</span>
       <h2 class="samples__heading">See the kind of work we use</h2>
       <div class="samples__card">
-        <!-- Placeholder: swap this block for an <img src="..."> or <a href="worksheet.pdf"> once a sample is ready -->
-        <div class="samples__placeholder" id="samplePlaceholder">
+        <a class="samples__placeholder" id="samplePlaceholder" href="assets/latitude-sample-booklet.pdf" target="_blank" rel="noopener" download>
           <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
             <g fill="none" stroke="var(--lat-ink,#2E2925)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.55">
               <path d="M 7 3 h 7 l 3 3 v 15 a 0 0 0 0 1 0 0 H 7 a 0 0 0 0 1 0 0 Z"/>
@@ -2584,8 +2602,8 @@ textarea[aria-invalid="true"] {
               <line x1="9.5" y1="17.4" x2="13" y2="17.4"/>
             </g>
           </svg>
-          <span>Sample worksheet coming soon</span>
-        </div>
+          <span>Download the sample booklet</span>
+        </a>
         <p class="samples__caption">Latitude lessons use syllabus-aligned examples, worked solutions and practice questions designed to show not just the answer, but the method behind it.</p>
       </div>
     </div>
